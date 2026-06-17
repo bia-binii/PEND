@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starlight Cinemas - A Melhor Experiência do Cinema</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23facc15'>★</text></svg>">
+</head>
+<body>
+  
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <span class="star-icon">★</span>
+        <span class="brand-name">Starlight</span>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Início</a></li>
+        <li><a href="#about" class="nav-link">Sobre</a></li>
+        <li><a href="#movies" class="nav-link">Filmes</a></li>
+        <li><a href="#coming-soon" class="nav-link">Em Breve</a></li>
+        <li><a href="#tickets" class="nav-link">Comprar Ingresso</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <header class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Viva a Magia do Cinema</h1>
+      <p class="hero-subtitle">Os maiores lançamentos e a melhor experiência para você</p>
+      <a href="#tickets" class="btn btn-primary btn-lg">Comprar Ingressos</a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">Sobre Starlight Cinemas</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Bem-vindo à <strong>Starlight Cinemas</strong>, onde a magia do cinema ganha vida. Com salas de última geração, conforto incomparável e tecnologia 4K, proporcionamos uma experiência cinematográfica inesquecível a cada sessão.</p>
+          <p>Nossa missão é criar momentos memoráveis, unindo tecnologia de ponta com um atendimento personalizado que faz toda a diferença.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/fachada_cinema.jpg" alt="Fachada do Cinema Starlight">   
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="movies-section" id="movies">
+    <div class="container">
+      <h2 class="section-title">Filmes em Cartaz</h2>
+      <div class="movies-grid" id="moviesGrid">
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="coming-soon-section" id="coming-soon">
+    <div class="container">
+      <h2 class="section-title">Em Breve</h2>
+      <div class="movies-grid" id="comingSoonGrid">
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="tickets-section" id="tickets">
+    <div class="container">
+      <h2 class="section-title">Comprar Ingressos</h2>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Nome Completo *</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="movie">Selecione o Filme *</label>
+            <select id="movie" name="movie" required>
+              <option value="">-- Escolha um filme --</option>
+            </select>
+            <span class="error-message" id="movieError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Data da Sessão *</label>
+            <input type="date" id="date" name="date" required>
+            <span class="error-message" id="dateError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Horário *</label>
+            <select id="time" name="time" required>
+              <option value="">-- Escolha o horário --</option>
+              <option value="14:00">14:00</option>
+              <option value="17:00">17:00</option>
+              <option value="20:00">20:00</option>
+              <option value="23:00">23:00</option>
+            </select>
+            <span class="error-message" id="timeError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantidade de Ingressos *</label>
+            <div class="quantity-input">
+              <button type="button" class="qty-btn" id="decreaseQty">−</button>
+              <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required readonly>
+              <button type="button" class="qty-btn" id="increaseQty">+</button>
+            </div>
+            <span class="error-message" id="quantityError"></span>
+          </div>
+        </div>
+
+        <div class="booking-summary" id="bookingSummary" style="display: none;">
+          <h3>Resumo da Compra</h3>
+          <div class="summary-item">
+            <span>Filme:</span>
+            <span id="summaryMovie">-</span>
+          </div>
+          <div class="summary-item">
+            <span>Data e Hora:</span>
+            <span id="summaryDateTime">-</span>
+          </div>
+          <div class="summary-item">
+            <span>Ingressos:</span>
+            <span id="summaryQuantity">-</span>
+          </div>
+          <div class="summary-item total">
+            <span>Total:</span>
+            <span id="summaryTotal">R$ 0,00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Finalizar Compra</button>
+      </form>
+
+      <div class="success-message" id="successMessage" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Compra Realizada com Sucesso!</h3>
+        <p>Obrigado, <span id="successName"></span>! Você receberá a confirmação no seu email: <strong id="successEmail"></strong></p>
+        <p>Seu código de confirmação é: <strong id="confirmationCode"></strong></p>
+        <button class="btn btn-secondary" onclick="resetBookingForm()">Fazer Nova Compra</button>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Fale Conosco</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Endereço</h4>
+              <p>Avenida Paulista, 1000<br>São Paulo, SP 01311-100</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h4>Telefone</h4>
+              <p>(11) 3456-7890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <h4>Email</h4>
+              <p>contato@starlightcinemas.com.br</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">⏰</span>
+            <div>
+              <h4>Atendimento</h4>
+              <p>Seg-Sex: 12h-23h<br>Sab-Dom: 10h-00h</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h4>Nos siga nas redes sociais</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">f</a>
+            <a href="#" class="social-icon" title="Instagram">📷</a>
+            <a href="#" class="social-icon" title="Twitter">𝕏</a>
+            <a href="#" class="social-icon" title="YouTube">▶</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>★ Starlight Cinemas</h4>
+          <p>A melhor experiência cinematográfica em São Paulo</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#movies">Filmes</a></li>
+            <li><a href="#tickets">Ingressos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Horários</h4>
+          <p>Seg-Sex: 12h - 23h<br>Sab-Dom: 10h - 00h</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p>(11) 3456-7890<br>contato@starlightcinemas.com.br</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Starlight Cinemas. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

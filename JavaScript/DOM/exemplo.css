@@ -1,0 +1,8 @@
+.destaque {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: underline;
+    color: red;
+    text-align: center;
+}

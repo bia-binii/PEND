@@ -1,0 +1,233 @@
+/* COMPUTADOR */
+
+body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    margin:0;
+    background:#f6faff;
+    color:rgb(121,15,15);
+}
+
+h1,h3{
+    color:rgb(121,15,15);
+    margin-top:24px;
+    margin-bottom:12px;
+}
+
+h1{
+    text-align:center;
+    font-size:2.2rem;
+}
+
+h3{
+    color:rgb(220,84,84);
+}
+
+a{
+    color:rgb(196,40,40);
+    text-decoration:none;
+
+    background:white;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    margin:5px;
+
+    display:inline-block;
+}
+
+header{
+
+    background:
+    linear-gradient(
+        90deg,
+        rgb(121,15,15),
+        rgb(196,40,40)
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+
+header h1,
+header p{
+    color:white;
+}
+
+ul,div{
+
+    background:white;
+
+    padding:25px;
+
+    margin:25px auto;
+
+    max-width:700px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 2px 8px
+    rgba(121,15,15,.1);
+
+}
+
+hr{
+    border:none;
+
+    border-top:
+    2px solid
+    rgb(196,40,40);
+
+    margin:40px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+body{
+    color:#b65d7a;
+}
+
+h1,h3{
+    color:#b65d7a;
+}
+
+h3{
+    color:#e38ca7;
+}
+
+a{
+    color:#d86b93;
+}
+
+header{
+
+background:
+linear-gradient(
+90deg,
+#f7bfd2,
+#f4d6e0
+);
+
+}
+
+ul,div{
+
+box-shadow:
+0 2px 8px
+rgba(230,150,180,.2);
+
+}
+
+hr{
+
+border-top:
+2px solid
+#e38ca7;
+
+}
+
+}
+
+
+/* CELULAR*/
+
+@media (max-width: 767px){
+
+body{
+
+color:#4a82b8;
+
+padding:10px;
+
+}
+
+h1,h3{
+
+color:#4a82b8;
+
+}
+
+h3{
+
+color:#78aee0;
+
+}
+
+a{
+
+display:block;
+
+width:100%;
+
+box-sizing:border-box;
+
+margin:8px 0;
+
+text-align:center;
+
+color:#5d99d1;
+
+}
+
+header{
+
+padding:20px;
+
+background:
+
+linear-gradient(
+90deg,
+#b9ddff,
+#d7ecff
+);
+
+}
+
+header img{
+
+width:140px;
+
+height:auto;
+
+}
+
+ul,
+div{
+
+padding:15px;
+
+max-width:100%;
+
+box-sizing:border-box;
+
+box-shadow:
+0 2px 8px
+rgba(120,170,220,.2);
+
+}
+
+hr{
+
+border-top:
+2px solid
+#78aee0;
+
+}
+
+}

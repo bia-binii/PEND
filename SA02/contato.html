@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <header class="cabecalho">
+        <div class="cabecalho__inner">
+            <div class="cabecalho__marca">
+                <span class="cabecalho__logo-label">NEWS</span>
+                <span class="cabecalho__logo-destaque">Today</span>
+            </div>
+ 
+            <button class="cabecalho__menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+                <span></span><span></span><span></span>
+            </button>
+ 
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+                <ul class="nav-principal__lista">
+                    <li><a href="index.html" class="nav-principal__link">Início</a></li>
+                    <li><a href="tecnologia.html" target="_blank" rel="noopener" class="nav-principal__link">Tecnologia</a></li>
+                    <li><a href="esportes.html" target="_blank" rel="noopener" class="nav-principal__link">Esportes</a></li>
+                    <li><a href="economia.html" target="_blank" rel="noopener" class="nav-principal__link">Economia</a></li>
+                    <li><a href="contato.html" class="nav-principal__link nav-principal__link--cta nav-principal__link--ativo">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <main class="principal">
+ 
+        <!-- Hero da página de contato -->
+        <section class="contato-hero">
+            <div class="contato-hero__inner">
+                <span class="etiqueta etiqueta--tecnologia">Fale com a redação</span>
+                <h1 class="contato-hero__titulo">Tem uma pauta? <span class="contato-hero__destaque">Conta pra gente.</span></h1>
+                <p class="contato-hero__resumo">Sugestões, denúncias, elogios ou só um "oi" — a redação da NewsToday lê tudo. Escolha um canal abaixo ou escreva direto pelo formulário.</p>
+            </div>
+        </section>
+ 
+        <!-- Cartões de canais de contato -->
+        <section class="canais" aria-label="Canais de contato">
+            <div class="canais__inner">
+ 
+                <a href="mailto:redacao@newstoday.com.br" class="canal-card">
+                    <span class="canal-card__icone" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+                    <h3 class="canal-card__titulo">E-mail</h3>
+                    <p class="canal-card__texto">redacao@newstoday.com.br</p>
+                </a>
+ 
+                <a href="#" class="canal-card">
+                    <span class="canal-card__icone" aria-hidden="true"><i class="bi bi-whatsapp"></i></span>
+                    <h3 class="canal-card__titulo">WhatsApp</h3>
+                    <p class="canal-card__texto">Plantão de notícias 24h</p>
+                </a>
+ 
+                <a href="#" class="canal-card">
+                    <span class="canal-card__icone" aria-hidden="true"><i class="bi bi-instagram"></i></span>
+                    <h3 class="canal-card__titulo">Instagram</h3>
+                    <p class="canal-card__texto">Acesse nossa página e fique por dentro das noticias!</p>
+                </a>
+ 
+            </div>
+        </section>
+ 
+        <!-- Formulário interativo -->
+        <section class="form-secao" aria-label="Formulário de contato">
+            <div class="form-secao__inner">
+ 
+                <form id="form-contato" class="form-contato" novalidate>
+ 
+                    <h2 class="form-contato__titulo">Envie sua mensagem</h2>
+ 
+                    <div class="campo">
+                        <label for="nome" class="campo__label">Nome</label>
+                        <input type="text" id="nome" name="nome" class="campo__input" placeholder="Como podemos te chamar?" required minlength="2">
+                        <span class="campo__erro" data-erro-para="nome">Digite seu nome (mínimo 2 letras).</span>
+                    </div>
+ 
+                    <div class="campo">
+                        <label for="email" class="campo__label">E-mail</label>
+                        <input type="email" id="email" name="email" class="campo__input" placeholder="voce@email.com" required>
+                        <span class="campo__erro" data-erro-para="email">Digite um e-mail válido.</span>
+                    </div>
+ 
+                    <div class="campo">
+                        <label for="assunto" class="campo__label">Assunto</label>
+                        <select id="assunto" name="assunto" class="campo__input campo__select" required>
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="pauta">Sugestão de pauta</option>
+                            <option value="erro">Encontrei um erro na matéria</option>
+                            <option value="parceria">Proposta de parceria</option>
+                            <option value="elogio">Elogio à redação</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+ 
+                    <div class="campo">
+                        <div class="campo__cabecalho-label">
+                            <label for="mensagem" class="campo__label">Mensagem</label>
+                            <span class="campo__contador"><span id="contador-atual">0</span>/400</span>
+                        </div>
+                        <textarea id="mensagem" name="mensagem" class="campo__input campo__textarea" placeholder="Escreva sua mensagem aqui..." maxlength="400" rows="5" required minlength="10"></textarea>
+                        <span class="campo__erro" data-erro-para="mensagem">Escreva ao menos 10 caracteres.</span>
+                    </div>
+ 
+                    <button type="submit" class="btn-enviar">
+                        <span class="btn-enviar__texto">Enviar mensagem</span>
+                        <span class="btn-enviar__icone" aria-hidden="true">→</span>
+                    </button>
+ 
+                </form>
+ 
+                <!-- Mensagem de sucesso (some por padrão) -->
+                <div id="sucesso" class="sucesso" hidden>
+                    <span class="sucesso__icone" aria-hidden="true">✓</span>
+                    <h2 class="sucesso__titulo">Mensagem enviada!</h2>
+                    <p class="sucesso__texto">Recebemos sua mensagem e a equipe da NewsToday vai te responder em breve.</p>
+                    <button type="button" id="btn-nova-mensagem" class="btn-leia-mais">Enviar outra mensagem</button>
+                </div>
+ 
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <footer class="rodape">
+        <div class="rodape__inner">
+            <div class="rodape__marca">
+                <span class="rodape__logo-label">NEWS</span><span class="rodape__logo-destaque">Today</span>
+                <p class="rodape__slogan">Notícias que importam, quando você precisa.</p>
+            </div>
+            <nav class="rodape__nav" aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener">Economia</a></li>
+                    <li><a href="contato.html" rel="noopener">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="rodape__direitos">© 2026 NewsToday. Todos os direitos reservados.</p>
+    </footer>
+ 
+    <script>
+        // Menu hamburguer
+        const btn = document.querySelector('.cabecalho__menu-btn');
+        const nav = document.querySelector('.nav-principal');
+        btn.addEventListener('click', () => {
+            const aberto = nav.classList.toggle('nav-principal--aberta');
+            btn.setAttribute('aria-expanded', aberto);
+        });
+ 
+        // Contador de caracteres da mensagem
+        const mensagem = document.getElementById('mensagem');
+        const contador = document.getElementById('contador-atual');
+        mensagem.addEventListener('input', () => {
+            contador.textContent = mensagem.value.length;
+        });
+ 
+        // Validação e envio do formulário
+        const form = document.getElementById('form-contato');
+        const sucesso = document.getElementById('sucesso');
+        const btnNovaMensagem = document.getElementById('btn-nova-mensagem');
+ 
+        function validarCampo(campo) {
+            const valido = campo.checkValidity();
+            campo.classList.toggle('campo__input--erro', !valido);
+            campo.classList.toggle('campo__input--ok', valido && campo.value.trim() !== '');
+            return valido;
+        }
+ 
+        form.querySelectorAll('.campo__input').forEach((campo) => {
+            campo.addEventListener('blur', () => validarCampo(campo));
+            campo.addEventListener('input', () => {
+                if (campo.classList.contains('campo__input--erro')) {
+                    validarCampo(campo);
+                }
+            });
+        });
+ 
+        form.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+ 
+            let formValido = true;
+            form.querySelectorAll('.campo__input').forEach((campo) => {
+                if (!validarCampo(campo)) formValido = false;
+            });
+ 
+            if (!formValido) {
+                const primeiroErro = form.querySelector('.campo__input--erro');
+                if (primeiroErro) primeiroErro.focus();
+                return;
+            }
+ 
+            // Simula envio bem-sucedido
+            form.hidden = true;
+            sucesso.hidden = false;
+            sucesso.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+ 
+        btnNovaMensagem.addEventListener('click', () => {
+            form.reset();
+            contador.textContent = '0';
+            form.querySelectorAll('.campo__input').forEach((campo) => {
+                campo.classList.remove('campo__input--erro', 'campo__input--ok');
+            });
+            sucesso.hidden = true;
+            form.hidden = false;
+            form.querySelector('#nome').focus();
+        });
+    </script>
+ 
+</body>
+</html>
+ 

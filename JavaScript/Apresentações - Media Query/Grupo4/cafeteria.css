@@ -1,0 +1,449 @@
+/* ========================= */
+/* 🎨 VARIÁVEIS E RESET */
+/* ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfaf6;
+}
+
+/* ========================= */
+/* 🧭 HEADER / NAVEGAÇÃO */
+/* ========================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  color: #5c4033;
+  font-weight: 700;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #5c4033;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #a67c52;
+  transition: width 0.3s ease;
+}
+
+#menu li a:hover {
+  color: #a67c52;
+}
+
+#menu li a:hover::after {
+  width: 100%;
+}
+
+.menu-mobile {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #5c4033;
+}
+
+/* ========================= */
+/* 🖼️ BANNER / HERO */
+/* ========================= */
+.banner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #5c4033 0%, #a67c52 100%);
+  color: #fff;
+  padding: 6rem 2rem 4rem;
+}
+
+.banner-texto h3 {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* 📦 SEÇÕES */
+/* ========================= */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #5c4033;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #a67c52;
+  margin: 0.5rem auto 0;
+}
+
+section > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container p {
+  max-width: 700px;
+  text-align: center;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ========================= */
+/* 🍰 CARDÁPIO */
+/* ========================= */
+.cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #5c4033;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #a67c52;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* 📞 CONTATO */
+/* ========================= */
+section:last-of-type {
+  background: #f5ebe0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+section:last-of-type p {
+  margin: 0.5rem 0;
+  color: #5c4033;
+}
+
+/* ========================= */
+/* 🦶 FOOTER */
+/* ========================= */
+footer {
+  background: #5c4033;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer p {
+  opacity: 0.8;
+}
+
+/* ========================= */
+/* 📱 CELULAR (até 768px) */
+/* ========================= */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav h2 {
+    font-size: 1.2rem;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    gap: 0;
+  }
+
+  #menu.ativo {
+    display: flex;
+  }
+
+  #menu li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .cardapio {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ========================= */
+/* 📲 TABLET (até 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .banner h1{
+    font-size: 2.8rem;
+  }
+
+  .cardapio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* ========================= */
+/* 💻 TELAS GRANDES */
+/* ========================= */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/* ========================= */
+/* ✨ FORMULÁRIO BONITO */
+/* ========================= */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #5c4033;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #a67c52;
+  box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.2);
+}
+
+form button {
+  background: #5c4033;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #a67c52;
+}
+
+/* ========================= */
+/* 💬 MENSAGEM DE FEEDBACK */
+/* ========================= */
+.mensagem {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.mensagem.sucesso {
+  background: #4caf50;
+}
+
+.mensagem.erro {
+  background: #e74c3c;
+}
+
+.mensagem.loading {
+  background: #a67c52;
+}
+
+/* ========================= */
+/* ⭐ DEP0IMENTOS MAIS BONITOS */
+/* ========================= */
+.depoimentos {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.depoimento {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  font-style: italic;
+}
+
+.depoimento span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+/* ========================= */
+/* 🌐 REDES SOCIAIS */
+/* ========================= */
+.redes-sociais {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.redes-sociais a {
+  text-decoration: none;
+  color: #5c4033;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #a67c52;
+}
+
+/* ========================= */
+/* ✨ EFEITO GERAL MAIS SUAVE */
+/* ========================= */
+section {
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia — NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <header class="cabecalho">
+        <div class="cabecalho__inner">
+            <div class="cabecalho__marca">
+                <span class="cabecalho__logo-label">NEWS</span>
+                <span class="cabecalho__logo-destaque">Today</span>
+            </div>
+ 
+            <button class="cabecalho__menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+                <span></span><span></span><span></span>
+            </button>
+ 
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+                <ul class="nav-principal__lista">
+                    <li><a href="index.html" class="nav-principal__link">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener" class="nav-principal__link nav-principal__link--ativo">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener" class="nav-principal__link">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener" class="nav-principal__link">Economia</a></li>
+                    <li><a href="contato.html" class="nav-principal__link nav-principal__link--cta">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <main class="principal">
+ 
+        <section class="hero" aria-label="Notícia em destaque de Tecnologia">
+            <div class="hero__inner">
+                <div class="hero__conteudo">
+                    <span class="etiqueta etiqueta--tecnologia">Tecnologia</span>
+                    <h1 class="hero__titulo">Inteligência artificial muda rotina de pequenas empresas</h1>
+                    <p class="hero__resumo">Ferramentas de automação antes restritas a grandes corporações chegam ao alcance de negócios locais, reduzindo custos e tempo de operação.</p>
+                    <a href="#" class="btn-leia-mais">Leia a matéria completa</a>
+                </div>
+                <figure class="hero__figura">
+                    <img
+                        src="https://anoregam.org.br/wp-content/uploads/2021/11/qual-a-tecnologia.jpg"
+                        alt="Painel digital com indicadores de tecnologia"
+                        class="hero__imagem"
+                        loading="eager">
+                </figure>
+            </div>
+        </section>
+ 
+        <section class="secao-noticias" aria-label="Mais notícias de Tecnologia">
+            <div class="secao-noticias__inner">
+                <h2 class="secao-noticias__titulo">Mais sobre Tecnologia</h2>
+ 
+                <div class="grade-noticias">
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg"
+                                alt="Crescimento do setor digital"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--tecnologia">Tecnologia</span>
+                            <h3 class="cartao-noticia__titulo">Startups nacionais atraem investimentos recordes</h3>
+                            <p class="cartao-noticia__resumo">O ecossistema de inovação brasileiro vive um momento histórico com aportes de capital nunca vistos antes.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://static.portaldaindustria.com.br/portaldaindustria/noticias/media/imagem_plugin/robpensativo.jpg"
+                                alt="Equipe de desenvolvimento trabalhando"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--tecnologia">Tecnologia</span>
+                            <h3 class="cartao-noticia__titulo">Demanda por desenvolvedores cresce em todo o país</h3>
+                            <p class="cartao-noticia__resumo">Empresas de diferentes setores ampliam equipes de tecnologia para acelerar projetos digitais.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://www.opencadd.com.br/hs-fs/hubfs/diferenca-entre-tecnologias-e-redes-wireless.jpg?width=1200&height=630&name=diferenca-entre-tecnologias-e-redes-wireless.jpg"
+                                alt="Dispositivos móveis modernos"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--tecnologia">Tecnologia</span>
+                            <h3 class="cartao-noticia__titulo">Novos smartphones chegam com foco em sustentabilidade</h3>
+                            <p class="cartao-noticia__resumo">Fabricantes investem em materiais recicláveis e baterias de maior durabilidade nos lançamentos de 2026.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <footer class="rodape">
+        <div class="rodape__inner">
+            <div class="rodape__marca">
+                <span class="rodape__logo-label">NEWS</span><span class="rodape__logo-destaque">Today</span>
+                <p class="rodape__slogan">Notícias que importam, quando você precisa.</p>
+            </div>
+            <nav class="rodape__nav" aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener">Economia</a></li>
+                    <li><a href="contato.html" rel="noopener">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="rodape__direitos">© 2026 NewsToday. Todos os direitos reservados.</p>
+    </footer>
+ 
+    <script>
+        const btn = document.querySelector('.cabecalho__menu-btn');
+        const nav = document.querySelector('.nav-principal');
+        btn.addEventListener('click', () => {
+            const aberto = nav.classList.toggle('nav-principal--aberta');
+            btn.setAttribute('aria-expanded', aberto);
+        });
+    </script>
+ 
+</body>
+</html>
+ 

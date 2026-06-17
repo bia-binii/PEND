@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Responsiva</title>
+  <link rel="stylesheet" href="cafeteria.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2>Grand Aroma</h2>
+
+      <ul id="menu">
+        
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Cardápio</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+
+      <button class="menu-mobile" onclick="abrirMenu()">☰</button>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div class="banner-texto">
+      <h3>Aberto de Segunda a Sábado • Café fresco • Ambiente aconchegante</h3>
+    </div>
+    <div>
+      <h1>Seu café favorito</h1>
+      <p>Ambiente agradável, café especial e atendimento acolhedor para todos os momentos do seu dia.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sobre</h2>
+    <div class="container">
+      <p>
+        Nossa cafeteria oferece cafés especiais preparados com grãos selecionados,
+        além de doces artesanais, salgados frescos e bebidas quentes e geladas.
+        Tudo isso em um ambiente confortável inspirado em grandes cafeterias do mercado.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cardápio</h2>
+    <p>Confira algumas das opções mais pedidas pelos nossos clientes:</p>
+
+    <div class="cardapio">
+      <div class="card">
+        <h3>Expresso</h3>
+        <p>R$ 5,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Capuccino</h3>
+        <p>R$ 8,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Pão de Queijo</h3>
+        <p>R$ 6,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Cookie</h3>
+        <p>R$ 10,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Chocolate Quente</h3>
+        <p>R$ 7,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Frappuccino</h3>
+        <p>R$ 8,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Brownie</h3>
+        <p>R$ 15,00</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato">
+    <h2>Contato</h2>
+    <p>📍 Rua das Flores, 123 - Centro</p>
+    <p>📞 (19) 99999-9999</p>
+    <p>🕒 Segunda a Sexta - 08h às 18h</p>
+    <p>🕒 Sábado - 09h às 14h</p>
+    <p>🕒 Domingo - Fechado</p>
+  </section>
+
+  <section>
+    <h2>Faça seu Pedido</h2>
+    <form id="pedido-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="pedido">Pedido:</label>
+      <textarea id="pedido" name="pedido" rows="4" required></textarea>
+
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Depoimentos</h2>
+
+    <div class="depoimentos">
+      <div class="depoimento">
+        <p>"O melhor café da cidade! Ambiente super aconchegante e atendimento impecável."</p>
+        <span>- Maria S.</span>
+      </div>
+
+      <div class="depoimento">
+        <p>"Adoro os doces e o café é sempre fresco. Recomendo para quem quer um lugar agradável para relaxar."</p>
+        <span>- João P.</span>
+      </div>
+    </div>
+
+    <h2>Redes Sociais</h2>
+    <p>Siga-nos para ficar por dentro das novidades e promoções:</p>
+
+    <ul class="redes-sociais">
+      <li><a href="https://www.facebook.com/?locale=pt_BR" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://x.com/?lang=pt" target="_blank">Twitter</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Projeto com media query </p>
+  </footer>
+
+  <script src="cafeteria.js"></script>
+</body>
+</html>

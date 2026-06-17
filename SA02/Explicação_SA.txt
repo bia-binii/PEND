@@ -1,0 +1,89 @@
+Situação de Aprendizagem 02 – NewsToday
+
+Quais melhorias foram realizadas?
+
+Durante o desenvolvimento do portal NewsToday foram realizadas diversas melhorias relacionadas à organização do código, responsividade, acessibilidade e experiência do usuário.
+
+Criação de páginas separadas para as categorias Tecnologia, Esportes, Economia e Contato.
+Implementação de um layout moderno utilizando CSS Grid e Flexbox.
+Criação de um menu responsivo com botão hambúrguer para dispositivos móveis.
+Adição de imagens ilustrativas e categorias visuais para cada notícia.
+Criação de uma página de contato com formulário interativo.
+Implementação de validação dos campos do formulário utilizando HTML5 e JavaScript.
+Inclusão de contador de caracteres para o campo de mensagem.
+Exibição de mensagem de sucesso após o envio do formulário.
+Melhoria da acessibilidade através de atributos ARIA e textos alternativos nas imagens.
+Utilização de carregamento otimizado de imagens com os atributos (loading="lazy") e (loading="eager").
+
+
+Quais elementos semânticos foram utilizados?
+Para melhorar a estrutura do site e facilitar a interpretação por navegadores e mecanismos de busca, foram utilizados os seguintes elementos semânticos:
+
+<header> – Cabeçalho principal do site.
+<nav> – Área de navegação entre as páginas.
+<main> – Conteúdo principal de cada página.
+<section> – Organização das diferentes seções do conteúdo.
+<article> – Representação individual de cada notícia.
+<figure> – Agrupamento de imagens relacionadas ao conteúdo.
+<footer> – Rodapé do site.
+<form> – Formulário de contato.
+<label> – Associação entre rótulos e campos do formulário.
+
+Esses elementos tornam o código mais organizado, acessível e compatível com boas práticas de desenvolvimento web.
+
+
+Quais Media Queries foram implementadas?
+Foram utilizadas Media Queries para adaptar o site a diferentes tamanhos de tela:
+
+Tablet (até 1024px) → css: @media (max-width: 1024px)
+
+Alterações:
+Redução do tamanho da imagem principal.
+Ajuste dos espaçamentos.
+Grade de notícias alterada de 3 para 2 colunas.
+
+Smartphones (até 768px) → css: @media (max-width: 768px)
+
+Alterações:
+Exibição do menu hambúrguer.
+Navegação transformada em menu suspenso.
+Hero reorganizado em uma única coluna.
+Imagem principal posicionada acima do texto.
+Grade de notícias exibida em apenas uma coluna.
+Rodapé reorganizado verticalmente.
+
+Smartphones pequenos (até 480px) → css: @media (max-width: 480px)
+
+Alterações:
+Redução do tamanho dos títulos.
+Ajuste da altura das imagens.
+Redução dos espaçamentos para melhor aproveitamento da tela.
+
+Acessibilidade → css: @media (prefers-reduced-motion: reduce)
+
+Alterações:
+Remoção de animações e transições para usuários que preferem menos movimento na interface.
+
+
+Quais decisões de UX e UI foram adotadas?
+UX (Experiência do Usuário)
+
+Navegação simples e intuitiva através do menu principal.
+Separação das notícias por categorias para facilitar a busca de informações.
+Formulário de contato com validação instantânea para evitar erros de preenchimento.
+Mensagens de feedback visual indicando sucesso ou erro.
+Layout responsivo para garantir boa experiência em computadores, tablets e celulares.
+Contador de caracteres para ajudar o usuário a controlar o tamanho da mensagem.
+
+UI (Interface do Usuário)
+
+Utilização de uma paleta de cores inspirada em portais de notícias, com destaque em vermelho para elementos importantes.
+Uso das fontes Playfair Display e Inter para criar contraste entre títulos e textos.
+Cartões de notícias com sombras e efeitos de hover para destacar conteúdos.
+Etiquetas coloridas para identificar rapidamente cada categoria.
+Botões com destaque visual para incentivar a interação.
+Cabeçalho fixo (sticky) para facilitar a navegação durante a leitura.
+Layout organizado com boa hierarquia visual e espaçamento adequado entre os elementos.
+
+
+Conclusão: O projeto NewsToday foi desenvolvido com foco em responsividade, acessibilidade e usabilidade, utilizando HTML semântico, CSS responsivo e recursos de interação em JavaScript para proporcionar uma experiência agradável em diferentes dispositivos.

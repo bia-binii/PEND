@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Cavalo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🐎 Ouro & Crina</h1>
+  <p>Detalhes da raça</p>
+</header>
+
+<main id="detalhesContainer"></main>
+
+<footer>
+  <p>© 2026 Ouro & Crina</p>
+</footer>
+
+<script>
+  const cavalo = JSON.parse(localStorage.getItem("cavaloSelecionado"));
+
+  const container = document.getElementById("detalhesContainer");
+
+  if (cavalo) {
+    container.innerHTML = `
+      <div class="card">
+        <img src="${cavalo.img}">
+        <div class="card-content">
+          <h2>${cavalo.nome}</h2>
+
+          <p><strong>Origem:</strong> ${cavalo.origem}</p>
+          <p><strong>Altura:</strong> ${cavalo.altura}</p>
+          <p><strong>Peso:</strong> ${cavalo.peso}</p>
+          <p><strong>Velocidade:</strong> ${cavalo.velocidade}</p>
+          <p><strong>Temperamento:</strong> ${cavalo.temperamento}</p>
+          <p><strong>Uso:</strong> ${cavalo.uso}</p>
+
+          <h3>Descrição</h3>
+          <p>${cavalo.desc}</p>
+
+          <button onclick="voltar()">⬅ Voltar</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function voltar() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+/* ============================================
+   TRIP GO - MEDIA QUERIES
+   Arquivo separado de responsividade
+   ============================================ */
+
+/* ============================================
+   TELAS GRANDES — 1441px+
+   ============================================ */
+@media (min-width: 1441px) {
+    .container { max-width: 1350px; }
+
+    #hero { padding: 0 8%; }
+
+    .hero-content h1 { font-size: 5rem; }
+    .hero-content p  { font-size: 1.35rem; }
+
+    .estrutura-grid,
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+    .editorial-item.large {height: 600px;}
+    .editorial-item.medium {height: 200px;}
+    .editorial-item.tall,
+    .editorial-item.wide,
+    .editorial-item.small {height: 400px;}
+}
+
+/* ============================================
+   NOTEBOOKS — 1025px até 1440px
+   ============================================ */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    .container { max-width: 1200px; }
+
+    .nav-container { padding: 0 40px; }
+
+    .hero-content h1 { font-size: 4rem; }
+
+    .estrutura-grid,
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================
+   TABLETS — 769px até 1024px
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    :root { font-size: 15px; }
+
+    #navbar { height: 75px; }
+
+    .nav-container { padding: 0 25px; }
+    .nav-menu      { gap: 18px; }
+
+    .logo     { font-size: 1.7rem; }
+    .nav-link { font-size: 0.9rem; }
+
+    .btn-contato { padding: 9px 16px; }
+
+    #hero {
+        padding: 0 40px;
+        text-align: left;
+    }
+
+    .hero-content        { max-width: 550px; }
+    .hero-content h1     { font-size: 3.2rem; }
+    .hero-content p      { font-size: 1.05rem; }
+
+    .section { padding: 4rem 0; }
+
+    .estrutura-grid,
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .estrutura-imagem,
+    .atividade-imagem { height: 210px; }
+
+    .editorial-grid { grid-template-columns: repeat(6, 1fr); gap: 14px; }
+
+    .editorial-item.large,
+    .editorial-item.medium,
+    .editorial-item.small,
+    .editorial-item.tall,
+    .editorial-item.wide {
+        grid-column: span 3;
+        height: 300px;
+    }
+}
+
+/* ============================================
+   CELULARES — até 768px
+   (menu hamburguer ativo)
+   ============================================ */
+@media (max-width: 768px) {
+
+    :root { font-size: 14px; }
+
+    body { overflow-x: hidden; }
+
+    .container { padding: 0 18px; }
+
+    /* ---- Navbar ---- */
+    #navbar {
+        height: 80px;
+        background: rgba(28, 38, 33, 0.95); /* fundo escuro fixo no mobile */
+    }
+
+    .nav-container {
+        justify-content: center;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    /* mostra hamburguer, esconde menus */
+    .menu-toggle { display: flex; }
+
+    .nav-left,
+    .nav-right {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        z-index: 1500;
+        transition: top 0.4s ease, opacity 0.4s ease;
+        /* estado fechado */
+        top: -100%;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-left {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .nav-right {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    /* estado aberto */
+    .nav-left.active {
+        top: 0;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-right.active {
+        top: 230px; /* fica logo abaixo do nav-left */
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /* links no menu mobile */
+    .nav-left .nav-link,
+    .nav-right .nav-link {
+        color: #111;
+        font-size: 1.1rem;
+    }
+
+    .nav-left .nav-link.active,
+    .nav-right .nav-link.active {
+        color: var(--primary-green);
+    }
+
+    .btn-contato { margin-top: 10px; }
+
+    /* logo centralizada e visível */
+    .logo {
+        position: static;
+        transform: none;
+        font-size: 1.8rem;
+        color: white;
+        pointer-events: auto;
+    }
+
+    /* ---- Hero ---- */
+    #hero {
+        min-height: 100vh;
+        justify-content: center;
+        text-align: center;
+        padding: 140px 20px 70px;
+    }
+
+    .hero-content        { max-width: 100%; }
+    .hero-content h1     { font-size: 2.6rem; line-height: 1.2; }
+    .hero-content p      { font-size: 1rem; margin: 0 auto; }
+
+    /* ---- Sections ---- */
+    .section { padding: 3.5rem 0; }
+
+    .section-title    { font-size: 2rem; text-align: center; }
+    .section-subtitle { font-size: 0.95rem; padding: 0 10px; }
+
+    /* ---- Cards ---- */
+    .estrutura-grid,
+    .grid-3 { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    .estrutura-card,
+    .card.atividade { border-radius: 14px; }
+
+    .estrutura-imagem,
+    .atividade-imagem { height: 220px; }
+
+    .estrutura-conteudo   { padding: 1.3rem; }
+    .estrutura-conteudo h3 { font-size: 1.2rem; }
+    .estrutura-conteudo p  { font-size: 0.92rem; }
+
+    /* ---- Galeria ---- */
+    .editorial-grid { grid-template-columns: 1fr; gap: 14px; }
+
+    .editorial-item.large,
+    .editorial-item.medium,
+    .editorial-item.small,
+    .editorial-item.tall,
+    .editorial-item.wide {
+        grid-column: span 1;
+        height: 260px;
+    }
+
+    img { object-position: center; }
+}
+
+/* ============================================
+   CELULARES PEQUENOS — até 480px
+   ============================================ */
+@media (max-width: 480px) {
+
+    :root { font-size: 13px; }
+
+    .container { padding: 0 14px; }
+
+    .logo     { font-size: 1.5rem; }
+    .nav-link { font-size: 0.82rem; }
+
+    .btn-contato { padding: 8px 14px; border-radius: 25px; }
+
+    #hero { padding-top: 120px; }
+
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p  { font-size: 0.92rem; }
+
+    .section-title { font-size: 1.7rem; }
+
+    .estrutura-imagem,
+    .atividade-imagem { height: 200px; }
+
+    .editorial-item.large,
+    .editorial-item.medium,
+    .editorial-item.small,
+    .editorial-item.tall,
+    .editorial-item.wide { height: 220px; }
+
+    .estrutura-conteudo    { padding: 1rem; }
+    .estrutura-conteudo h3 { font-size: 1.1rem; }
+    .estrutura-conteudo p  { font-size: 0.88rem; }
+
+    .grid-3,
+    .estrutura-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   TELAS MUITO PEQUENAS — até 360px
+   ============================================ */
+@media (max-width: 360px) {
+
+    .hero-content h1 { font-size: 1.8rem; }
+
+    .nav-link    { font-size: 0.75rem; }
+    .btn-contato { padding: 7px 12px; font-size: 0.75rem; }
+
+    .editorial-item.large,
+    .editorial-item.medium,
+    .editorial-item.small,
+    .editorial-item.tall,
+    .editorial-item.wide { height: 190px; }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+
+    #hero {
+        min-height: 120vh;
+        padding-top: 120px;
+    }
+
+    .hero-content h1 { font-size: 2.4rem; }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================
+   PREFERÊNCIAS DO SISTEMA
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+        --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@media print {
+    #navbar,
+    .btn-contato { display: none !important; }
+
+    body { font-size: 12pt; line-height: 1.4; }
+
+    .section { page-break-inside: avoid; }
+}

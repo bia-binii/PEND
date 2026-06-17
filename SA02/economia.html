@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia — NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <header class="cabecalho">
+        <div class="cabecalho__inner">
+            <div class="cabecalho__marca">
+                <span class="cabecalho__logo-label">NEWS</span>
+                <span class="cabecalho__logo-destaque">Today</span>
+            </div>
+ 
+            <button class="cabecalho__menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+                <span></span><span></span><span></span>
+            </button>
+ 
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+                <ul class="nav-principal__lista">
+                    <li><a href="index.html" class="nav-principal__link">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener" class="nav-principal__link">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener" class="nav-principal__link">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener" class="nav-principal__link nav-principal__link--ativo">Economia</a></li>
+                    <li><a href="contato.html" class="nav-principal__link nav-principal__link--cta">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <main class="principal">
+ 
+        <section class="hero" aria-label="Notícia em destaque de Economia">
+            <div class="hero__inner">
+                <div class="hero__conteudo">
+                    <span class="etiqueta etiqueta--economia">Economia</span>
+                    <h1 class="hero__titulo">Bolsa fecha em alta com otimismo do mercado externo</h1>
+                    <p class="hero__resumo">Investidores reagem positivamente a dados econômicos e impulsionam os principais índices do país.</p>
+                    <a href="#" class="btn-leia-mais">Leia a matéria completa</a>
+                </div>
+                <figure class="hero__figura">
+                    <img
+                        src="https://media.istockphoto.com/id/1399575283/pt/foto/money-makes-the-world-go-round.jpg?s=612x612&w=0&k=20&c=hi3pBKwpl0lQkwxxtBjWbksmp8CMS3Lfcuiu_fUwiqM="
+                        alt="Gráficos de bolsa de valores em alta"
+                        class="hero__imagem"
+                        loading="eager">
+                </figure>
+            </div>
+        </section>
+ 
+        <section class="secao-noticias" aria-label="Mais notícias de Economia">
+            <div class="secao-noticias__inner">
+                <h2 class="secao-noticias__titulo">Mais sobre Economia</h2>
+ 
+                <div class="grade-noticias">
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://images.ctfassets.net/hrltx12pl8hq/2ZsN8c6PzxXM3k8uvIElQy/75a387f84954d46f340623ab57391b0a/shutterstock_1190706394.jpg?fit=fill&w=600&h=400"
+                                alt="Crescimento do setor digital"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--economia">Economia</span>
+                            <h3 class="cartao-noticia__titulo">Pesquisa aponta crescimento do setor digital</h3>
+                            <p class="cartao-noticia__resumo">O setor apresentou crescimento significativo nos últimos anos, impulsionado pela adoção de novas plataformas.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://holdbrasil.com.br/wp-content/uploads/2024/10/imagem-website-site-1.png"
+                                alt="Reunião sobre indicadores econômicos"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--economia">Economia</span>
+                            <h3 class="cartao-noticia__titulo">Inflação desacelera pelo terceiro mês consecutivo</h3>
+                            <p class="cartao-noticia__resumo">Dados oficiais mostram retração nos preços de alimentos e combustíveis ao longo do período.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                    <article class="cartao-noticia">
+                        <figure class="cartao-noticia__figura">
+                            <img
+                                src="https://wordpress-cms-gc-prod-assets.quero.space/uploads/2014/09/iStock_000025804348Small-1.jpg"
+                                alt="Profissionais em atualização de competências"
+                                class="cartao-noticia__imagem"
+                                loading="lazy">
+                        </figure>
+                        <div class="cartao-noticia__corpo">
+                            <span class="etiqueta etiqueta--mercado">Mercado</span>
+                            <h3 class="cartao-noticia__titulo">Mercado de trabalho exige novas competências</h3>
+                            <p class="cartao-noticia__resumo">Profissionais buscam atualização constante para acompanhar as mudanças e se destacar nas empresas.</p>
+                            <a href="#" class="cartao-noticia__link">Leia mais →</a>
+                        </div>
+                    </article>
+ 
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <footer class="rodape">
+        <div class="rodape__inner">
+            <div class="rodape__marca">
+                <span class="rodape__logo-label">NEWS</span><span class="rodape__logo-destaque">Today</span>
+                <p class="rodape__slogan">Notícias que importam, quando você precisa.</p>
+            </div>
+            <nav class="rodape__nav" aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener">Economia</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="rodape__direitos">© 2026 NewsToday. Todos os direitos reservados.</p>
+    </footer>
+ 
+    <script>
+        const btn = document.querySelector('.cabecalho__menu-btn');
+        const nav = document.querySelector('.nav-principal');
+        btn.addEventListener('click', () => {
+            const aberto = nav.classList.toggle('nav-principal--aberta');
+            btn.setAttribute('aria-expanded', aberto);
+        });
+    </script>
+ 
+</body>
+</html>

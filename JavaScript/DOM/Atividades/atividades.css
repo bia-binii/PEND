@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #fcb4d1, #ffffff);
+    color:#ff4da6;
+    padding:40px;
+    line-height:1.6;
+    text-align: center;
+}
+
+#titulo{
+    font-size:48px;
+    text-align:center;
+    margin-bottom:20px;
+    color:#ff4da6;
+    letter-spacing:2px;
+    text-shadow:0px 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+#subtitulo{
+    margin-top:30px;
+    margin-bottom:10px;
+    color:#ff4da6;
+    padding-left:10px;
+    font-size:22px;
+
+}
+
+hr{
+    margin:25px 0;
+    border:none;
+    height:1px;
+    background:#ffcce6;
+}
+
+
+button{
+    background: linear-gradient(45deg, #fb3799, #f979b9);
+    border:none;
+    padding:10px 18px;
+    margin-top:8px;
+    margin-bottom:10px;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0px 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0px 6px 15px rgba(255, 105, 180, 0.5);
+}
+
+input, textarea{
+    width:350px;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ffb3d9;
+    margin-top:8px;
+    margin-bottom:10px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus, textarea:focus{
+    border-color:#ff4da6;
+    box-shadow:0px 0px 8px rgba(255,77,166,0.4);
+}
+
+ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+li{
+    background:#fff0f7;
+    margin-top:6px;
+    padding:8px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+li:hover{
+    background:#ffd6eb;
+    transform:translateX(5px);
+}
+
+#contador, #contadorCliques{
+    font-weight:bold;
+    color:#ff4da6;
+}
+
+#mensagemNome{
+    font-weight:bold;
+    margin-top:5px;
+}

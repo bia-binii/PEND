@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMW S1000RR — Born to Race</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#94A3B8" stroke-width="3"/>
+        <circle cx="50" cy="50" r="40" fill="none"/>
+        <path d="M50 10 A40 40 0 0 1 90 50 L50 50 Z" fill="#1E3A8A"/>
+        <path d="M50 90 A40 40 0 0 1 10 50 L50 50 Z" fill="#1E3A8A"/>
+        <path d="M10 50 A40 40 0 0 1 50 10 L50 50 Z" fill="#fff"/>
+        <path d="M90 50 A40 40 0 0 1 50 90 L50 50 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="15" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+      </svg>
+      <span class="nav-logo-text">BMW <span>M</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#specs">Specs</a></li>
+      <li><a href="#gallery">Galeria</a></li>
+      <li><a href="#features">Tecnologia</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-stripe"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">BMW Motorrad — 2024</div>
+      <h1 class="hero-title">
+        <div class="line1">Born</div>
+        <div class="line2">To Race</div>
+      </h1>
+      <p class="hero-sub">
+        A S1000RR não é apenas uma motocicleta. É a manifestação de décadas de engenharia de competição colocada à disposição das ruas.
+      </p>
+      <div class="hero-actions">
+        <a href="#specs" class="btn-primary">
+          <i class="fas fa-tachometer-alt"></i>
+          Ver Especificações
+        </a>
+        <a href="#gallery" class="btn-ghost">
+          Explorar Galeria
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <section id="specs">
+    <div class="section-header fade-up">
+      <div class="section-label">
+        <i class="fas fa-microchip"></i>
+        Detalhes Técnicos
+      </div>
+      <h2 class="section-title">Desempenho Absoluto</h2>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-card accent fade-up delay-1">
+        <div class="spec-icon"><i class="fas fa-horse"></i></div>
+        <div class="spec-value">210<span class="spec-unit">cv</span></div>
+        <div class="spec-label">Potência Máxima</div>
+        <div class="spec-desc">A 13.500 rpm, com oversquare engine de 999cc e quatro cilindros em linha.</div>
+        <div class="spec-bar"><div class="spec-bar-fill" style="width:100%"></div></div>
+      </div>
+
+      <div class="spec-card fade-up delay-2">
+        <div class="spec-icon"><i class="fas fa-bolt"></i></div>
+        <div class="spec-value">113<span class="spec-unit">Nm</span></div>
+        <div class="spec-label">Torque Máximo</div>
+        <div class="spec-desc">Entrega linear de torque a partir de 5.500 rpm com curva plana.</div>
+        <div class="spec-bar"><div class="spec-bar-fill" style="width:78%"></div></div>
+      </div>
+
+      <div class="spec-card fade-up delay-3">
+        <div class="spec-icon"><i class="fas fa-gauge-high"></i></div>
+        <div class="spec-value">300<span class="spec-unit">km/h</span></div>
+        <div class="spec-label">Velocidade Máxima</div>
+        <div class="spec-desc">Velocidade de ponta verificada em circuito, com limitador eletrônico.</div>
+        <div class="spec-bar"><div class="spec-bar-fill" style="width:92%"></div></div>
+      </div>
+
+      <div class="spec-card fade-up delay-4">
+        <div class="spec-icon"><i class="fas fa-weight-hanging"></i></div>
+        <div class="spec-value">197<span class="spec-unit">kg</span></div>
+        <div class="spec-label">Peso em Ordem</div>
+        <div class="spec-desc">Relação potência/peso de 1,07 cv/kg — classe superbike pura.</div>
+        <div class="spec-bar"><div class="spec-bar-fill" style="width:55%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="section-header fade-up">
+      <div class="section-label">
+        <i class="fas fa-camera"></i>
+        Galeria
+      </div>
+      <h2 class="section-title">Veja a Fera</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade-up">
+        <span class="gallery-num">01</span>
+        <img src="img/s1000-frente.jpg" alt="BMW S1000RR Frente" loading="lazy" />
+        <div class="gallery-caption">Dinâmica em Circuito</div>
+      </div>
+
+      <div class="gallery-item fade-up delay-1">
+        <span class="gallery-num">02</span>
+        <img src="img/s1000-calcada.jpg" alt="S1000RR na calçada" loading="lazy" />
+        <div class="gallery-caption">Aerodinâmica Extrema</div>
+      </div>
+
+      <div class="gallery-item fade-up delay-2">
+        <span class="gallery-num">03</span>
+        <img src="img/s1000-andando.jpg" alt="S1000RR Andando" loading="lazy" />
+        <div class="gallery-caption">Engenharia de Precisão</div>
+      </div>
+
+      <div class="gallery-item fade-up delay-3">
+        <span class="gallery-num">04</span>
+        <img src="img/s1000-preta.jpg" alt="BMW S1000RR Preta" loading="lazy" />
+        <div class="gallery-caption">Velocidade em Estado Puro</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="features-row">
+      <div class="feature-item fade-up">
+        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+        <div class="feature-content">
+          <h3>BMW ShiftCam</h3>
+          <p>Sistema de variação de curso e tempo das válvulas de admissão para máxima eficiência em toda a gama de rotações.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-up delay-1">
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="feature-content">
+          <h3>DTC + ABS Pro</h3>
+          <p>Controle de tração dinâmico com 5 modos e freio ABS em curva para máxima segurança ativa em pista.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-up delay-2">
+        <div class="feature-icon"><i class="fas fa-wind"></i></div>
+        <div class="feature-content">
+          <h3>Aerodinâmica Ativa</h3>
+          <p>Winglets integrados geram downforce aerodinâmico e reduzem o empinamento sob aceleração plena.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-up delay-3">
+        <div class="feature-icon"><i class="fas fa-sliders"></i></div>
+        <div class="feature-content">
+          <h3>DDC Suspension</h3>
+          <p>Suspensão Dynamic Damping Control com ajuste eletrônico em tempo real por telemétria de acelerómetro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-copy">© 2024 BMW Motorrad. Landing page para fins ilustrativos.</p>
+    <p class="footer-tagline">Make Life a <span>Ride</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

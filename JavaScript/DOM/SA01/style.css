@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #7a84ee, #ffffff);
+    color: #0c1171;
+    padding: 40px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULO */
+h6 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #0c1171;
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 10px rgba(120, 105, 255, 0.3);
+}
+
+/* BOTÃO */
+button {
+    background: linear-gradient(45deg, #0c1171, #171d8d);
+    border: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(120, 105, 255, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(120, 105, 255, 0.3);
+}
+
+/* INPUTS E TEXTAREA */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #171d8d;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* FOCO */
+input:focus,
+textarea:focus {
+    border-color: #0c1171;
+    box-shadow: 0px 0px 8px rgba(120, 105, 255, 0.4);
+}
+
+/* SELECT */
+select {
+    width: 100%;
+    border: 2px solid #171d8d;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    color: #0c1171;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(120, 105, 255, 0.3);
+}
+
+/* LISTA */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    background: #cacffe;
+    margin-top: 6px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+li:hover {
+    background: #b4bafc;
+    transform: translateX(5px);
+}
+
+/* TEXTO AUXILIAR */
+span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #959494;
+    font-weight: bold;
+}
+
+/* ===== SENHA ===== */
+.daSenha {
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+
+.daSenha p {
+    margin-bottom: 5px;
+}
+
+/* input com espaço pro ícone */
+.daSenha input {
+    padding-right: 40px;
+}
+
+/* ícone FIXO */
+.icone {
+    position: absolute;
+    right: 12px;
+    top: 42px; /* alinhado com o input */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* estados (não mexem no layout) */
+.input-erro {
+    border-color: red;
+}
+
+.input-sucesso {
+    border-color: green;
+}
