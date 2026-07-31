@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bia Bini — Sobre Mim</title>
+    <meta name="description" content="Página pessoal de Marina Duarte, designer e desenvolvedora front-end.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="sobremim.css">
+</head>
+
+<body>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="cabecalho" id="topo">
+        <div class="cabecalho__faixa">
+            <a href="#topo" class="marca">
+                <span class="marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 60 60" class="flor-svg" role="img" aria-label="Flor símbolo da marca">
+                        <g class="flor-svg__petalas">
+                            <ellipse class="petala petala--1" cx="30" cy="14" rx="9" ry="16" />
+                            <ellipse class="petala petala--2" cx="30" cy="14" rx="9" ry="16" />
+                            <ellipse class="petala petala--3" cx="30" cy="14" rx="9" ry="16" />
+                            <ellipse class="petala petala--4" cx="30" cy="14" rx="9" ry="16" />
+                            <ellipse class="petala petala--5" cx="30" cy="14" rx="9" ry="16" />
+                        </g>
+                        <circle cx="30" cy="30" r="6" class="flor-svg__miolo" />
+                    </svg>
+                </span>
+                <span class="marca__texto">Portifólio<em>.</em></span>
+            </a>
+
+            <button class="menu-alterna" id="menuAlterna" aria-expanded="false" aria-controls="navPrincipal"
+                aria-label="Abrir menu de navegação">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="navegacao" id="navPrincipal" aria-label="Navegação principal">
+                <ul class="navegacao__lista">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#familia">Família</a></li>
+                    <li><a href="#contato" class="navegacao__cta">Fale comigo</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- ===== HERO / ABERTURA ===== -->
+        <div class="hero">
+            <div class="hero__conteudo">
+                <p class="hero__etiqueta">Jornada Pessoal · Bianca Bini</p>
+                <h1 class="hero__titulo">
+                    <h1>Um cantinho para<br> compartilhar quem <span>eu sou</span>.</h1>
+                    <p class="hero__texto">
+                        Oi! Eu sou Bianca Letícia Bini, tenho 17 anos e moro em Mococa, São Paulo. Criei este espaço
+                        para reunir um
+                        pedacinho de quem sou: minhas paixões, hobbies, memórias e tudo aquilo que me inspira.
+                        Espero que você goste de conhecer um pouco da minha história.
+                    </p>
+                    <div class="hero__acoes">
+                        <a href="#familia" class="botao botao--principal">Família</a>
+                        <a href="#contato" class="botao botao--fantasma">Enviar uma mensagem</a>
+                    </div>
+            </div>
+
+            <div class="hero__moldura" aria-hidden="true">
+                <div class="moldura-flor">
+                    <img src="img/Design sem nome.png">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="conteudo-principal">
+
+        <!-- SOBRE -->
+        <section class="secao secao--sobre" id="sobre">
+            <div class="secao__cabecalho">
+                <p class="secao__etiqueta">Me conheça melhor</p>
+                <h2 class="secao__titulo">Sobre mim</h2>
+            </div>
+
+            <div class="sobre__grade">
+                <figure class="sobre__retrato">
+                    <img src="img/eu mesma.png" width="500" height="600">
+                </figure>
+
+                <div class="sobre__texto">
+                    <p>
+                        Vou contar um pouquinho sobre mim. Afinal, acredito que conhecer uma pessoa vai muito além do
+                        que ela faz.
+                    </p>
+                    <p>
+                        Sou uma pessoa tranquila, criativa e curiosa, sempre em busca de aprender coisas novas e viver
+                        experiências que me façam crescer. Gosto de aproveitar os pequenos momentos, ouvir música,
+                        assistir séries, passar tempo com as pessoas que amo e descobrir novos interesses. Acredito que
+                        cada fase da vida traz oportunidades para evoluir, e procuro levar comigo tudo o que aprendo
+                        pelo caminho. Este espaço foi criado para compartilhar um pouco da minha história, dos meus
+                        gostos e da pessoa que estou me tornando.
+                    </p>
+
+                    <dl class="sobre__fatos">
+                        <div class="sobre__fato">
+                            <dt>JEITO DE SER</dt>
+                            <dd>Curiosa, criativa e dedicada</dd>
+                        </div>
+                        <div class="sobre__fato">
+                            <dt>ME INSPIRA</dt>
+                            <dd>Novas experiências e boas memórias</dd>
+                        </div>
+                        <div class="sobre__fato">
+                            <dt>ACREDITO EM</dt>
+                            <dd>Pequenos momentos fazem grandes histórias</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="secao secao--habilidades" id="habilidades">
+            <div class="secao__cabecalho">
+                <p class="secao__etiqueta">Canteiro de habilidades</p>
+                <h2 class="secao__titulo">O que eu cultivo</h2>
+            </div>
+
+            <ul class="grade-especimes">
+                <li class="especime">
+                    <span class="especime__flor" aria-hidden="true">✿</span>
+                    <h3 class="especime__titulo">Criatividade</h3>
+                    <p class="especime__categoria">MINHA ESSÊNCIA</p>
+                    <p class="especime__descricao">Gosto de transformar ideias em algo único, sempre buscando soluções
+                        criativas e atenção aos pequenos detalhes.</p>
+                </li>
+                <li class="especime">
+                    <span class="especime__flor" aria-hidden="true">✿</span>
+                    <h3 class="especime__titulo">Organização</h3>
+                    <p class="especime__categoria">QUEM EU SOU</p>
+                    <p class="especime__descricao">Planejar e manter tudo organizado faz parte da forma como encaro
+                        desafios
+                        e desenvolvo meus projetos.</p>
+                </li>
+                <li class="especime">
+                    <span class="especime__flor" aria-hidden="true">✿</span>
+                    <h3 class="especime__titulo">Curiosidade</h3>
+                    <p class="especime__categoria">O QUE ME MOVE</p>
+                    <p class="especime__descricao">Estou sempre aprendendo algo novo, explorando diferentes áreas e
+                        buscando
+                        evoluir um pouco a cada dia.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- familia -->
+        <section class="secao secao--familia" id="familia">
+            <div class="secao__cabecalho">
+                <p class="secao__etiqueta">Onde encontro carinho, apoio e os melhores momentos da minha vida.</p>
+                <h2 class="secao__titulo">Meu Porto Seguro</h2>
+            </div>
+
+            <div class="grade-familia">
+                <article class="familia">
+                    <div class="familia__imagem">
+                        <img src="img/family.png" alt="Minha família">
+                    </div>
+                    <div class="familia__corpo">
+                        <h3>Meus maiores exemplos</h3>
+                        <p>Meus pais são minha base e minha maior fonte de apoio. Com amor, dedicação e incentivo,
+                            me ensinaram valores que levo para a vida e me inspiram a crescer a cada dia.</p>
+
+                    </div>
+                </article>
+
+                <article class="familia">
+                    <div class="familia__imagem">
+                        <img src="img/vô e vó.png" alt="Meus avós">
+                    </div>
+                    <div class="familia__corpo">
+                        <h3>Minhas raízes</h3>
+                        <p>Meus avós ocupam um lugar muito especial no meu coração. Com carinho, sabedoria e histórias
+                            para contar, fizeram parte da minha infância e continuam sendo uma grande fonte de amor,
+                            acolhimento e boas lembranças</p>
+                    </div>
+                </article>
+
+                <article class="familia">
+                    <div class="familia__imagem">
+                        <img src="img/namorado.png " alt="Meu namorado">
+                    </div>
+                    <div class="familia__corpo">
+                        <h3>Ao meu lado</h3>
+                        <p>Ter alguém para compartilhar a vida torna cada conquista ainda mais especial. Meu namorado é
+                            uma pessoa muito importante para mim, alguém que me apoia, me incentiva e faz parte da minha
+                            história.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="secao secao--contato" id="contato">
+            <div class="contato__envelope">
+                <div class="contato__intro">
+                    <p class="secao__etiqueta">OBRIGADA PELA VISITA</p>
+                    <h2 class="secao__titulo">Gostou de conhecer um pouco sobre mim?</h2>
+                    <p>
+                        Espero que este espaço tenha mostrado um pedacinho da minha história. Se quiser conversar,
+                        compartilhar uma opinião ou simplesmente mandar uma mensagem, ficarei muito feliz em receber.
+                    </p>
+                </div>
+                
+
+                <form class="formulario-contato" id="formularioContato" novalidate>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Como posso te chamar?"
+                            autocomplete="name">
+                        <span class="campo__erro" id="erroNome" role="alert"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email">
+                        <span class="campo__erro" id="erroEmail" role="alert"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem <span class="campo__opcional">(opcional)</span></label>
+                        <textarea id="mensagem" name="mensagem" rows="4"
+                            placeholder="Conte um pouco sobre a sua ideia..."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao botao--principal botao--largura-total">Enviar mensagem</button>
+
+                    <p class="formulario-contato__resposta" id="respostaFormulario" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <div class="rodape__marca">
+                <span class="marca__icone" aria-hidden="true">🌸</span>
+                <p>Feito com carinho por Bianca Bini.</p>
+            </div>
+
+            <ul class="rodape__redes">
+                <li><a href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="mailto:bianca.bini@example.com">E-mail</a></li>
+            </ul>
+        </div>
+
+        <p class="rodape__direitos">© <span id="anoAtual"></span> Bianca Bini. Todos os direitos reservados.</p>
+
+        <button class="botao-topo" id="botaoTopo" aria-label="Voltar ao topo da página">↑</button>
+    </footer>
+
+    <script src="sobremim.js"></script>
+</body>
+
+</html>
