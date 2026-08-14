@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff5f8);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #5c3042;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(194, 24, 91, 0.15);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8e3a5d;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 2px solid #f3b6c9;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    color: #5c3042;
+    background-color: #fff9fb;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #e91e63;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+#botaoCadastrar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoCadastrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(194, 24, 91, 0.3);
+}
+
+#botaoCadastrar:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(194, 24, 91, 0.15);
+}
+
+#resultado > div {
+    border-left: 5px solid #e91e63;
+    background: #fff4f7;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#resultado p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#resultado p:last-child {
+    margin-bottom: 0;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    form,
+    #resultado {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
