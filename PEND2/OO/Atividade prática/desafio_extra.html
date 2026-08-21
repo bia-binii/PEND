@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Produto - Desafio Extra</title>
+    <link rel="stylesheet" href="desafio_extra.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cadastro de Produto</h1>
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome">
+
+    <label for="preco">Preço (R$)</label>
+    <input type="number" id="preco" step="0.01" min="0">
+
+    <label for="categoria">Categoria</label>
+    <input type="text" id="categoria">
+
+    <label for="desconto">Desconto (%)</label>
+    <input type="number" id="desconto" step="0.01" min="0" max="100">
+
+    <button id="botaoCadastrar">Cadastrar</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="desafio_extra.js"></script>
+</body>
+</html>
