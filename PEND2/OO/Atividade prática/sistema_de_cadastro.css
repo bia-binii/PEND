@@ -1,0 +1,262 @@
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f8faff);
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   CONTAINER PRINCIPAL
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(30, 41, 59, 0.12);
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #312e81;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 10px;
+}
+
+
+/* ================================
+   LABELS
+================================ */
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+
+/* ================================
+   INPUTS
+================================ */
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #6366f1;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ================================
+   BOTÃO CADASTRAR
+================================ */
+
+#botaoCadastrar {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+#botaoCadastrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.35);
+}
+
+#botaoCadastrar:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   ÁREA DOS PRODUTOS
+================================ */
+
+#resultado {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* ================================
+   CARD DO PRODUTO
+================================ */
+
+.produto {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.produto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.13);
+}
+
+
+/* ================================
+   INFORMAÇÕES DO PRODUTO
+================================ */
+
+.produto p {
+    margin: 10px 0;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.produto p:first-child {
+    margin-top: 4px;
+    font-size: 20px;
+    color: #312e81;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.produto strong {
+    color: #334155;
+}
+
+
+/* ================================
+   PREÇO COM DESCONTO
+================================ */
+
+.produto p:last-of-type {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 700;
+}
+
+
+/* ================================
+   BOTÃO EXCLUIR
+================================ */
+
+.botaoExcluir {
+    width: 100%;
+    margin-top: 18px;
+    padding: 11px;
+    border: none;
+    border-radius: 9px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botaoExcluir:hover {
+    background: #dc2626;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(220, 38, 38, 0.25);
+}
+
+.botaoExcluir:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #resultado {
+        grid-template-columns: 1fr;
+    }
+}
