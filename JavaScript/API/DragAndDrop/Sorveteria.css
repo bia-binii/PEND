@@ -1,0 +1,1345 @@
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --creme: #fff8f0;
+    --creme-escuro: #fbe9d9;
+
+    --rosa: #ffb6c1;
+    --rosa-forte: #ff7fa1;
+
+    --marrom: #6b4226;
+    --marrom-claro: #a9754f;
+
+    --azul: #bfe6f5;
+    --amarelo: #ffd166;
+
+    --verde-ok: #4caf7d;
+    --vermelho-erro: #e35d5d;
+
+    --font-display: 'Baloo', 'Segoe UI', sans-serif;
+    --font-body: 'Segoe UI', sans-serif;
+
+    --radius: 18px;
+
+    --shadow:
+        0 8px 20px rgba(107, 66, 38, 0.15);
+}
+
+
+/* =========================================================
+   FONTE
+========================================================= */
+
+@font-face {
+
+    font-family: 'Baloo';
+
+    src:
+        local('Baloo 2'),
+        local('Comic Sans MS');
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 182, 193, 0.25),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(191, 230, 245, 0.3),
+            transparent 40%
+        ),
+
+        var(--creme);
+
+    font-family: var(--font-body);
+
+    color: var(--marrom);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 16px;
+}
+
+
+/* =========================================================
+   TELAS
+========================================================= */
+
+.screen {
+
+    display: none;
+
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+
+.screen.active {
+
+    display: block;
+
+    animation:
+        fadeIn 0.35s ease;
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes pulse {
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+
+@keyframes pop {
+
+    from {
+
+        transform:
+            scale(0);
+    }
+
+    to {
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   TELA INICIAL
+========================================================= */
+
+#start-screen {
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+.logo-emoji {
+
+    font-size: 72px;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    filter:
+        drop-shadow(
+            0 6px 10px
+            rgba(107, 66, 38, 0.2)
+        );
+}
+
+
+.title {
+
+    font-family:
+        var(--font-display);
+
+    font-weight: 800;
+
+    font-size:
+        clamp(32px, 6vw, 52px);
+
+    letter-spacing: 1px;
+
+    color:
+        var(--marrom);
+
+    margin: 0;
+}
+
+
+.title span {
+
+    color:
+        var(--rosa-forte);
+}
+
+
+.subtitle {
+
+    font-size: 18px;
+
+    color:
+        var(--marrom-claro);
+
+    margin:
+        10px 0 34px;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.btn {
+
+    font-family:
+        var(--font-display);
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    padding:
+        14px 32px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.btn:active {
+
+    transform:
+        translateY(0);
+}
+
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-forte),
+            var(--rosa)
+        );
+
+    color: white;
+}
+
+
+.btn-secondary {
+
+    background: white;
+
+    color:
+        var(--marrom);
+
+    border:
+        2px solid
+        var(--creme-escuro);
+}
+
+
+.btn-row {
+
+    display: flex;
+
+    gap: 14px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+========================================================= */
+
+.decor-row {
+
+    font-size: 34px;
+
+    margin-top: 40px;
+
+    opacity: 0.85;
+
+    letter-spacing: 14px;
+}
+
+
+/* =========================================================
+   COMO JOGAR
+========================================================= */
+
+#how-to-play {
+
+    display: none;
+
+    text-align: left;
+
+    background: white;
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        24px 28px;
+
+    margin-top: 24px;
+
+    box-shadow:
+        var(--shadow);
+
+    max-width: 560px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+#how-to-play.active {
+
+    display: block;
+}
+
+
+#how-to-play h3 {
+
+    font-family:
+        var(--font-display);
+
+    color:
+        var(--rosa-forte);
+
+    margin-top: 0;
+}
+
+
+#how-to-play ol {
+
+    padding-left: 20px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR
+========================================================= */
+
+.topbar {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto auto;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: white;
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        12px 20px;
+
+    box-shadow:
+        var(--shadow);
+
+    margin-bottom: 16px;
+
+    font-family:
+        var(--font-display);
+
+    font-weight: 700;
+}
+
+
+.topbar .brand {
+
+    color:
+        var(--rosa-forte);
+
+    font-size: 18px;
+}
+
+
+.topbar .stat {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 16px;
+}
+
+
+#timer.low {
+
+    color:
+        var(--vermelho-erro);
+
+    animation:
+        pulse 1s infinite;
+}
+
+
+/* =========================================================
+   PEDIDO
+========================================================= */
+
+.order-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--amarelo),
+            #ffe8a8
+        );
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        16px 20px;
+
+    margin-bottom: 16px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.order-card .who {
+
+    font-weight: 700;
+
+    font-family:
+        var(--font-display);
+
+    margin-bottom: 4px;
+}
+
+
+.order-card .quote {
+
+    font-style: italic;
+
+    margin:
+        4px 0 10px;
+}
+
+
+.order-chips {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+
+.chip {
+
+    background: white;
+
+    border-radius: 999px;
+
+    padding:
+        6px 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        opacity 0.2s,
+        transform 0.2s;
+}
+
+
+.chip.done {
+
+    opacity: 0.35;
+
+    text-decoration:
+        line-through;
+
+    transform:
+        scale(0.95);
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+========================================================= */
+
+.game-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        210px 1fr;
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+
+.ingredients-panel {
+
+    background: white;
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    padding:
+        18px 14px;
+
+    height: fit-content;
+
+    position: sticky;
+
+    top: 16px;
+
+    max-height: 650px;
+
+    overflow-y: auto;
+}
+
+
+.ingredients-title {
+
+    font-family:
+        var(--font-display);
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+    color:
+        var(--rosa-forte);
+
+    padding-bottom: 12px;
+
+    margin-bottom: 16px;
+
+    border-bottom:
+        2px solid
+        var(--creme-escuro);
+}
+
+
+/* =========================================================
+   GRUPOS
+========================================================= */
+
+.ing-group {
+
+    margin-bottom: 20px;
+}
+
+
+.ing-group:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.ing-group h5 {
+
+    font-family:
+        var(--font-display);
+
+    margin:
+        0 0 9px;
+
+    color:
+        var(--marrom-claro);
+
+    font-size: 13px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.5px;
+}
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+.ing-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   INGREDIENTES
+========================================================= */
+
+.ingredient {
+
+    background:
+        var(--creme);
+
+    border-radius:
+        13px;
+
+    padding:
+        9px 8px;
+
+    text-align:
+        center;
+
+    cursor:
+        grab;
+
+    user-select:
+        none;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.12s,
+        box-shadow 0.12s,
+        background 0.12s;
+
+    width: 100%;
+}
+
+
+.ingredient:hover {
+
+    transform:
+        translateX(3px);
+
+    box-shadow:
+        0 6px 14px
+        rgba(0, 0, 0, 0.12);
+
+    background:
+        #fff4ea;
+}
+
+
+.ingredient:active {
+
+    cursor:
+        grabbing;
+}
+
+
+.ingredient.dragging {
+
+    opacity: 0.4;
+}
+
+
+.ingredient .emoji {
+
+    font-size: 25px;
+
+    display: block;
+}
+
+
+.ingredient .name {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-top: 2px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   ÁREA DE MONTAGEM
+========================================================= */
+
+.build-area {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1fr)
+        minmax(260px, 1fr);
+
+    gap: 16px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ZONAS
+========================================================= */
+
+.zones {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   ZONA DE DROP
+========================================================= */
+
+.zone {
+
+    background:
+        var(--creme);
+
+    border:
+        2.5px dashed
+        var(--creme-escuro);
+
+    border-radius:
+        16px;
+
+    padding:
+        18px;
+
+    min-height:
+        105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    text-align: center;
+
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        transform 0.1s,
+        box-shadow 0.15s;
+}
+
+
+.zone .zone-label {
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    color:
+        var(--marrom-claro);
+}
+
+
+.zone .zone-content {
+
+    font-size: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    min-height: 36px;
+}
+
+
+.zone.dragover {
+
+    background:
+        var(--rosa);
+
+    border-color:
+        var(--rosa-forte);
+
+    transform:
+        scale(1.02);
+
+    box-shadow:
+        0 8px 18px
+        rgba(255, 127, 161, 0.18);
+}
+
+
+.zone.filled {
+
+    border-style:
+        solid;
+
+    border-color:
+        var(--verde-ok);
+
+    background:
+        #f4fff8;
+}
+
+
+/* =========================================================
+   PAINEL DO SORVETE
+========================================================= */
+
+.cone-panel {
+
+    background: white;
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    padding:
+        20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100%;
+}
+
+
+.cone-panel h4 {
+
+    margin:
+        0 0 15px;
+
+    font-family:
+        var(--font-display);
+
+    color:
+        var(--marrom-claro);
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   VISUAL DO SORVETE
+========================================================= */
+
+.cone-visual {
+
+    font-size: 56px;
+
+    line-height: 1;
+
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    min-height: 250px;
+
+    width: 100%;
+}
+
+
+.cone-visual .layer {
+
+    margin-top:
+        -14px;
+
+    animation:
+        pop 0.25s ease;
+}
+
+
+.cone-base {
+
+    font-size: 60px;
+
+    margin-top:
+        -6px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.ingredients-panel::-webkit-scrollbar {
+
+    width: 6px;
+}
+
+
+.ingredients-panel::-webkit-scrollbar-track {
+
+    background:
+        var(--creme);
+
+    border-radius:
+        10px;
+}
+
+
+.ingredients-panel::-webkit-scrollbar-thumb {
+
+    background:
+        var(--rosa);
+
+    border-radius:
+        10px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.feedback-toast {
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(-20px);
+
+    background:
+        var(--verde-ok);
+
+    color: white;
+
+    padding:
+        10px 22px;
+
+    border-radius:
+        999px;
+
+    font-weight: 700;
+
+    box-shadow:
+        var(--shadow);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.25s,
+        transform 0.25s;
+
+    pointer-events:
+        none;
+
+    z-index: 10;
+
+    font-family:
+        var(--font-display);
+}
+
+
+.feedback-toast.show {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+.feedback-toast.error {
+
+    background:
+        var(--vermelho-erro);
+}
+
+
+/* =========================================================
+   RESULTADO
+========================================================= */
+
+#result-screen {
+
+    text-align: center;
+
+    padding:
+        30px 20px;
+}
+
+
+.result-card {
+
+    background: white;
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    padding:
+        32px;
+
+    max-width:
+        460px;
+
+    margin:
+        0 auto;
+}
+
+
+.result-emoji {
+
+    font-size: 60px;
+}
+
+
+.result-title {
+
+    font-family:
+        var(--font-display);
+
+    font-size: 26px;
+
+    color:
+        var(--rosa-forte);
+
+    margin:
+        6px 0 18px;
+}
+
+
+.result-stats {
+
+    text-align:
+        left;
+
+    font-size:
+        16px;
+
+    line-height:
+        2;
+
+    margin-bottom:
+        10px;
+}
+
+
+.result-stats b {
+
+    float:
+        right;
+}
+
+
+.stars {
+
+    font-size:
+        30px;
+
+    margin:
+        14px 0;
+
+    letter-spacing:
+        4px;
+}
+
+
+.grade {
+
+    font-family:
+        var(--font-display);
+
+    font-weight:
+        800;
+
+    font-size:
+        20px;
+
+    color:
+        var(--marrom);
+
+    margin-bottom:
+        22px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .game-layout {
+
+        grid-template-columns:
+            180px 1fr;
+    }
+
+
+    .build-area {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .cone-panel {
+
+        min-height:
+            300px;
+    }
+
+
+    .zones {
+
+        order: 1;
+    }
+
+
+    .cone-panel {
+
+        order: 2;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 620px) {
+
+    body {
+
+        padding:
+            10px;
+    }
+
+
+    .screen {
+
+        max-width:
+            100%;
+    }
+
+
+    .topbar {
+
+        grid-template-columns:
+            1fr auto;
+
+        gap:
+            10px;
+    }
+
+
+    .topbar .brand {
+
+        grid-column:
+            1 / -1;
+
+        text-align:
+            center;
+    }
+
+
+    .game-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ingredients-panel {
+
+        position:
+            static;
+
+        max-height:
+            none;
+
+        overflow:
+            visible;
+    }
+
+
+    .ingredients-title {
+
+        text-align:
+            center;
+    }
+
+
+    .ing-list {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap:
+            8px;
+    }
+
+
+    .ingredient {
+
+        min-width:
+            0;
+    }
+
+
+    .build-area {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .cone-panel {
+
+        min-height:
+            300px;
+    }
+
+
+    .zone {
+
+        min-height:
+            95px;
+    }
+
+
+    .order-card {
+
+        padding:
+            14px;
+    }
+
+
+    .btn {
+
+        width:
+            100%;
+    }
+
+
+    .btn-row {
+
+        width:
+            100%;
+    }
+
+}

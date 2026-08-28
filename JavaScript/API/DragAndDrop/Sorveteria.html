@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ice Cream Master 🍦</title>
+
+    <link rel="stylesheet" href="Sorveteria.css">
+</head>
+
+<body>
+
+    <!-- tela inicial -->
+
+    <div id="start-screen" class="screen active">
+
+        <span class="logo-emoji">🍦</span>
+
+        <h1 class="title">
+            ICE CREAM <span>MASTER</span>
+        </h1>
+
+        <p class="subtitle">
+            Jogo desenvolvido com Drag and Drop
+        </p>
+
+        <div class="btn-row">
+
+            <button class="btn btn-primary" id="btn-start">
+                🍨 Começar jogo
+            </button>
+
+            <button class="btn btn-secondary" id="btn-how">
+                ❔ Como jogar
+            </button>
+
+        </div>
+
+
+        <!-- como jogar -->
+
+        <div id="how-to-play">
+
+            <h3>Como jogar</h3>
+
+            <ol>
+
+                <li>
+                    O cliente faz um pedido com sabor, cobertura e decoração.
+                </li>
+
+                <li>
+                    Arraste cada ingrediente pedido para a área certa do sorvete.
+                </li>
+
+                <li>
+                    Ingrediente certo = ganha pontos.
+                </li>
+
+                <li>
+                    Ingrediente errado = perde pontos!
+                </li>
+
+                <li>
+                    Complete o pedido antes do tempo acabar para ganhar bônus.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <div class="decor-row">
+            🍓 🍫 🍒 🍨 🍬
+        </div>
+
+    </div>
+
+
+    <div id="game-screen" class="screen">
+
+        <!-- barra de cima  -->
+
+        <div class="topbar">
+
+            <span class="brand">
+                🍦 Ice Cream Master
+            </span>
+
+            <span class="stat">
+                ⭐ <span id="score">0</span>
+            </span>
+
+            <span class="stat">
+                ⏱️ <span id="timer">01:00</span>
+            </span>
+
+        </div>
+
+
+        <!-- pedido do cliente -->
+
+        <div class="order-card">
+
+            <div class="who">
+                👩 Pedido do cliente
+            </div>
+
+            <div class="quote" id="order-quote"></div>
+
+            <div class="order-chips" id="order-chips"></div>
+
+        </div>
+
+
+        <div class="game-layout">
+
+
+            <!-- menu na lateral -->
+
+            <aside class="ingredients-panel">
+
+                <div class="ingredients-title">
+                    🍨 Ingredientes
+                </div>
+
+
+                <!-- sabores -->
+
+                <div class="ing-group">
+
+                    <h5>
+                        🍓 Sabores
+                    </h5>
+
+                    <div
+                        class="ing-list"
+                        id="list-sabor">
+                    </div>
+
+                </div>
+
+
+                <!-- coberturas -->
+
+                <div class="ing-group">
+
+                    <h5>
+                        🍬 Coberturas
+                    </h5>
+
+                    <div
+                        class="ing-list"
+                        id="list-cobertura">
+                    </div>
+
+                </div>
+
+
+                <!-- decoracao -->
+
+                <div class="ing-group">
+
+                    <h5>
+                        ✨ Decorações
+                    </h5>
+
+                    <div
+                        class="ing-list"
+                        id="list-decoracao">
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- area de montagem -->
+
+            <div class="build-area">
+
+                <div class="zones">
+
+
+                    <!-- sabor -->
+
+                    <div
+                        class="zone"
+                        data-zone="sabor"
+                        ondragover="onDragOver(event)"
+                        ondragleave="onDragLeave(event)"
+                        ondrop="onDrop(event)"
+                    >
+
+                        <span class="zone-label">
+                            🍨 Sabor
+                        </span>
+
+                        <span
+                            class="zone-content"
+                            id="zone-sabor">
+                        </span>
+
+                    </div>
+
+
+                    <!-- cobertura -->
+
+                    <div
+                        class="zone"
+                        data-zone="cobertura"
+                        ondragover="onDragOver(event)"
+                        ondragleave="onDragLeave(event)"
+                        ondrop="onDrop(event)"
+                    >
+
+                        <span class="zone-label">
+                            🍫 Cobertura
+                        </span>
+
+                        <span
+                            class="zone-content"
+                            id="zone-cobertura">
+                        </span>
+
+                    </div>
+
+
+                    <!-- decoracao -->
+
+                    <div
+                        class="zone"
+                        data-zone="decoracao"
+                        ondragover="onDragOver(event)"
+                        ondragleave="onDragLeave(event)"
+                        ondrop="onDrop(event)"
+                    >
+
+                        <span class="zone-label">
+                            ✨ Decoração
+                        </span>
+
+                        <span
+                            class="zone-content"
+                            id="zone-decoracao">
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- seu sorvete -->
+
+                <div class="cone-panel">
+
+                    <h4>
+                        Seu sorvete
+                    </h4>
+
+                    <div
+                        class="cone-visual"
+                        id="cone-visual">
+
+                        <div class="cone-base">
+                            🍦
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- resultado -->
+
+    <div id="result-screen" class="screen">
+
+        <div class="result-card">
+
+            <div
+                class="result-emoji"
+                id="result-emoji">
+
+                🎉
+
+            </div>
+
+
+            <div
+                class="result-title"
+                id="result-title">
+
+                Pedido finalizado!
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div>
+                    Ingredientes corretos
+                    <b id="res-certos">0/0</b>
+                </div>
+
+                <div>
+                    Erros
+                    <b id="res-erros">0</b>
+                </div>
+
+                <div>
+                    Tempo usado
+                    <b id="res-tempo">00:00</b>
+                </div>
+
+                <div>
+                    Pontuação
+                    <b id="res-pontos">0</b>
+                </div>
+
+            </div>
+
+
+            <div
+                class="stars"
+                id="res-stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+
+            <div
+                class="grade"
+                id="res-grade">
+
+                MESTRE DO SORVETE!
+
+            </div>
+
+
+            <div class="btn-row">
+
+                <button
+                    class="btn btn-primary"
+                    id="btn-next">
+
+                    🍨 Próximo pedido
+
+                </button>
+
+
+                <button
+                    class="btn btn-secondary"
+                    id="btn-menu">
+
+                    🏠 Menu
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="feedback-toast"
+        id="toast">
+    </div>
+
+    <script src="Sorveteria.js"></script>
+
+</body>
+
+</html>
