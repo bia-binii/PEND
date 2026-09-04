@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cápsula do Tempo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky" id="sky" aria-hidden="true"></div>
+
+  <nav class="progress" id="progress" aria-label="Etapas da cápsula" hidden>
+    <div class="progress-step" data-step="location">
+      <span class="progress-dot" aria-hidden="true"></span>
+      <span class="progress-label">Localização</span>
+    </div>
+    <div class="progress-line" aria-hidden="true"></div>
+    <div class="progress-step" data-step="photo">
+      <span class="progress-dot" aria-hidden="true"></span>
+      <span class="progress-label">Fotografia</span>
+    </div>
+    <div class="progress-line" aria-hidden="true"></div>
+    <div class="progress-step" data-step="capsule">
+      <span class="progress-dot" aria-hidden="true"></span>
+      <span class="progress-label">Cápsula</span>
+    </div>
+  </nav>
+
+  <main class="stage" id="stage">
+
+    <section class="screen screen--active" id="screen-intro" data-screen="intro">
+      <div class="intro">
+        <p class="eyebrow-glyph" aria-hidden="true">⏳</p>
+        <h1 class="intro-title">Cápsula do Tempo</h1>
+        <p class="intro-lead">Alguns momentos merecem ser guardados exatamente como são.</p>
+        <p class="intro-body">
+          Sua localização e uma fotografia serão utilizadas para criar uma cápsula
+          digital do momento presente. Nada é enviado a lugar nenhum — tudo acontece
+          aqui, no seu navegador.
+        </p>
+        <button class="btn btn--primary" id="btn-start" type="button">
+          Criar minha cápsula
+        </button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-location" data-screen="location">
+
+      <div class="panel" id="location-loading" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <h2 class="panel-title">Localizando seu momento...</h2>
+        <p class="panel-sub">Aguarde enquanto confirmamos onde você está agora.</p>
+      </div>
+
+      <div class="panel" id="location-result" hidden>
+        <p class="panel-check" aria-hidden="true">✓</p>
+        <h2 class="panel-title">Localização encontrada</h2>
+        <dl class="data-grid">
+          <div class="data-item">
+            <dt>Latitude</dt>
+            <dd id="loc-latitude">—</dd>
+          </div>
+          <div class="data-item">
+            <dt>Longitude</dt>
+            <dd id="loc-longitude">—</dd>
+          </div>
+          <div class="data-item">
+            <dt>Precisão</dt>
+            <dd id="loc-accuracy">—</dd>
+          </div>
+        </dl>
+        <button class="btn btn--primary" id="btn-to-camera" type="button">
+          Continuar
+        </button>
+      </div>
+
+      <div class="panel panel--error" id="location-error" hidden>
+        <p class="panel-glyph" aria-hidden="true">📍</p>
+        <h2 class="panel-title">Não conseguimos acessar sua localização.</h2>
+        <p class="panel-sub">Para criar sua cápsula completa, precisamos da permissão de localização.</p>
+        <p class="panel-detail" id="location-error-detail"></p>
+        <button class="btn btn--primary" id="btn-retry-location" type="button">
+          Tentar novamente
+        </button>
+      </div>
+
+    </section>
+
+    <section class="screen" id="screen-camera" data-screen="camera">
+
+      <div class="panel" id="camera-intro" hidden>
+        <p class="panel-glyph" aria-hidden="true">📷</p>
+        <h2 class="panel-title">Capture seu momento</h2>
+        <p class="panel-sub">Agora registre através da câmera aquilo que você está vivendo.</p>
+        <button class="btn btn--primary" id="btn-activate-camera" type="button">
+          Ativar câmera
+        </button>
+      </div>
+
+      <div class="panel" id="camera-loading" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <h2 class="panel-title">Abrindo a câmera...</h2>
+      </div>
+
+      <div class="camera-view" id="camera-view" hidden>
+        <div class="camera-frame">
+          <video id="video" autoplay playsinline aria-label="Pré-visualização da câmera"></video>
+          <img id="photo-preview" alt="Fotografia capturada do momento" hidden>
+        </div>
+        <div class="camera-controls" id="camera-controls-live">
+          <button class="btn btn--primary btn--capture" id="btn-capture" type="button" aria-label="Capturar momento">
+            <span class="btn-capture-ring" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="camera-controls camera-controls--review" id="camera-controls-review" hidden>
+          <button class="btn btn--ghost" id="btn-retake" type="button">
+            Tirar outra
+          </button>
+          <button class="btn btn--primary" id="btn-use-photo" type="button">
+            Usar esta foto
+          </button>
+        </div>
+      </div>
+
+      <div class="panel panel--error" id="camera-error" hidden>
+        <p class="panel-glyph" aria-hidden="true">📷</p>
+        <h2 class="panel-title">Não conseguimos acessar sua câmera.</h2>
+        <p class="panel-sub">Você pode tentar novamente ou verificar as permissões do navegador.</p>
+        <p class="panel-detail" id="camera-error-detail"></p>
+        <button class="btn btn--primary" id="btn-retry-camera" type="button">
+          Tentar novamente
+        </button>
+      </div>
+
+    </section>
+
+    <section class="screen" id="screen-building" data-screen="building">
+      <div class="panel">
+        <div class="spinner spinner--glow" aria-hidden="true"></div>
+        <h2 class="panel-title">Preparando sua cápsula...</h2>
+        <p class="panel-sub">Guardando este instante exatamente como ele aconteceu.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-final" data-screen="final">
+      <div class="final">
+        <h2 class="final-title">Sua cápsula está pronta</h2>
+        <p class="final-lead">Este momento aconteceu aqui. E agora está guardado.</p>
+
+        <article class="capsule-card">
+          <div class="capsule-photo">
+            <img id="capsule-photo" alt="Fotografia guardada na cápsula">
+          </div>
+          <div class="capsule-facts">
+            <div class="capsule-fact">
+              <span class="capsule-fact-label">Localização</span>
+              <span class="capsule-fact-value" id="capsule-latlong">—</span>
+              <span class="capsule-fact-sub" id="capsule-accuracy">—</span>
+            </div>
+            <div class="capsule-fact">
+              <span class="capsule-fact-label">Momento</span>
+              <span class="capsule-fact-value" id="capsule-date">—</span>
+              <span class="capsule-fact-sub" id="capsule-time">—</span>
+            </div>
+          </div>
+        </article>
+
+        <button class="btn btn--ghost" id="btn-restart" type="button">
+          Criar nova cápsula
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <canvas id="canvas" hidden></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
