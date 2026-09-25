@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsToday — Notícias que importam</title>
+    <link rel="stylesheet" href="APIs.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="widgets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- cabecalho -->
+    <header class="cabecalho">
+        <div class="cabecalho__inner">
+            <div class="cabecalho__marca">
+                <span class="cabecalho__logo-label">NEWS</span>
+                <span class="cabecalho__logo-destaque">Today</span>
+            </div>
+
+            <button class="cabecalho__menu-btn" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav-principal">
+                <span></span><span></span><span></span>
+            </button>
+
+
+            <!-- navegacao -->
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+                <ul class="nav-principal__lista">
+                    <li><a href="index.html" class="nav-principal__link nav-principal__link--ativo">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener" class="nav-principal__link">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener" class="nav-principal__link">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener" class="nav-principal__link">Economia</a></li>
+                    <li><a href="contato.html" class="nav-principal__link nav-principal__link--cta">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="topbar">
+                <div class="brand">
+                    <span class="dot"></span>
+                    <span>Direto ao ponto</span>
+                    <span class="clock" id="clock"></span>
+                </div>
+
+                <div class="widgets">
+                    <div class="widget loading" id="w-weather">
+                        <span class="icon">🌤️</span>
+                        <div class="meta">
+                            <span class="label" id="weather-label">SUA LOCALIZAÇÃO</span>
+                            <span class="value" id="weather-value">carregando…</span>
+                        </div>
+                    </div>
+
+                    <div class="widget loading" id="w-usd">
+                        <span class="icon">💵</span>
+                        <div class="meta">
+                            <span class="label">DÓLAR</span>
+                            <span class="value" id="usd-value">carregando…</span>
+                        </div>
+                    </div>
+
+                    <div class="widget loading" id="w-eur">
+                        <span class="icon">💶</span>
+                        <div class="meta">
+                            <span class="label">EURO</span>
+                            <span class="value" id="eur-value">carregando…</span>
+                        </div>
+                    </div>
+
+                    <div class="widget loading" id="w-btc">
+                        <span class="icon">₿</span>
+                        <div class="meta">
+                            <span class="label">BITCOIN</span>
+                            <span class="value" id="btc-value">carregando…</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="refresh-wrap">
+                    <button class="refresh" id="refresh-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <path d="M21 12a9 9 0 1 1-3-6.7" />
+                            <path d="M21 3v6h-6" />
+                        </svg>
+                        Atualizar
+                    </button>
+                </div>
+            </div>
+
+    <!-- conteudo principal -->
+    <main class="principal">
+
+        <!-- noticia destaque -->
+        <section class="hero" aria-label="Notícia em destaque">
+
+            <div class="hero__inner">
+
+                <div class="hero__conteudo">
+
+                    <span class="etiqueta etiqueta--tecnologia" id="categoria-destaque">
+                        Notícias
+                    </span>
+
+                    <h1 class="hero__titulo" id="titulo-destaque">
+                        Carregando notícia...
+                    </h1>
+
+                    <p class="hero__resumo" id="resumo-destaque">
+                        Aguarde enquanto buscamos as notícias mais recentes.
+                    </p>
+
+                    <a href="#" id="link-destaque" class="btn-leia-mais" target="_blank" rel="noopener">
+                        Leia a matéria completa
+                    </a>
+
+                </div>
+
+                <figure class="hero__figura">
+                    <img id="imagem-destaque" src="news_today.png" alt="Notícia em destaque" class="hero__imagem"
+                        loading="eager">
+                </figure>
+
+            </div>
+
+        </section>
+
+        <section class="secao-noticias" aria-label="Mais notícias">
+            <div class="secao-noticias__inner">
+                <h2 class="secao-noticias__titulo">Mais Notícias</h2>
+                <div class="grade-noticias" id="noticias">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- rodape-->
+    <footer class="rodape">
+        <div class="rodape__inner">
+            <div class="rodape__marca">
+                <span class="rodape__logo-label">NEWS</span><span class="rodape__logo-destaque">Today</span>
+                <p class="rodape__slogan">Notícias que importam, quando você precisa.</p>
+            </div>
+            <nav class="rodape__nav" aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html" rel="noopener">Tecnologia</a></li>
+                    <li><a href="esportes.html" rel="noopener">Esportes</a></li>
+                    <li><a href="economia.html" rel="noopener">Economia</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="rodape__direitos">© 2026 NewsToday. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.cabecalho__menu-btn');
+        const nav = document.querySelector('.nav-principal');
+        btn.addEventListener('click', () => {
+            const aberto = nav.classList.toggle('nav-principal--aberta');
+            btn.setAttribute('aria-expanded', aberto);
+        });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="APIs.js"></script>
+
+</body>
+
+</html>
