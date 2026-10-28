@@ -1,0 +1,420 @@
+:root {
+  --rosa-claro: #FCE7F3;
+  --rosa-medio: #E879AD;
+  --rosa-escuro: #BE185D;
+  --preto: #171217;
+  --offwhite: #FFF8FB;
+  --texto-suave: #5C4B56;
+
+body {
+    font-family: var(--bs-body-font-family);
+}
+  /* Mapeia a paleta nas variáveis do Bootstrap */
+  --bs-body-color: var(--preto);
+  --bs-primary: var(--rosa-escuro);
+  --bs-primary-rgb: 190, 24, 93;
+  --bs-dark: var(--preto);
+  --bs-dark-rgb: 23, 18, 23;
+  --bs-secondary-color: var(--texto-suave);
+  --bs-tertiary-bg: var(--offwhite);
+  --bs-tertiary-bg-rgb: 255, 248, 251;
+  --bs-link-color: var(--rosa-escuro);
+  --bs-link-color-rgb: 190, 24, 93;
+  --bs-link-hover-color: var(--preto);
+  --bs-link-hover-color-rgb: 23, 18, 23;
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+}
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, .display-5 {
+  font-family: var(--fonte-titulo);
+  letter-spacing: .01em;
+}
+
+.lead { color: var(--texto-suave); }
+
+:focus-visible {
+  outline: 3px solid var(--rosa-escuro);
+  outline-offset: 3px;
+}
+header :focus-visible,
+.site-footer :focus-visible,
+.promo-bar :focus-visible,
+.text-bg-dark :focus-visible,
+.hero-preto :focus-visible,
+.hero-escuro :focus-visible { outline-color: var(--rosa-medio); }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 2000;
+  background: var(--preto); color: #fff; padding: .6rem 1rem;
+  text-decoration: none; transition: top .2s;
+}
+.skip-link:focus { top: 1rem; color: #fff; }
+
+/* ---------- 2. Faixa promocional + navbar ---------- */
+.promo-bar {
+  background: var(--rosa-escuro);
+  text-align: center;
+  padding: .55rem 1rem;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.promo-bar a { color: #fff; text-decoration: none; transition: color .25s; }
+.promo-bar a:hover { color: var(--rosa-claro); }
+
+header .navbar { padding-top: .8rem; padding-bottom: .8rem; border-bottom: 1px solid rgba(232, 121, 173, .35); }
+
+.navbar-dark {
+  --bs-navbar-color: rgba(255, 255, 255, .85);
+  --bs-navbar-hover-color: var(--rosa-medio);
+  --bs-navbar-active-color: var(--rosa-medio);
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: var(--rosa-medio);
+}
+.navbar-brand {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+}
+.navbar .nav-link {
+  position: relative;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  transition: color .25s;
+}
+@media (min-width: 992px) {
+  .navbar .nav-link { margin: 0 .5rem; }
+  .navbar .nav-link::after {
+    content: "";
+    position: absolute; left: var(--bs-navbar-nav-link-padding-x); right: var(--bs-navbar-nav-link-padding-x); bottom: .25rem;
+    height: 1px; background: var(--rosa-medio);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .navbar .nav-link:hover::after,
+  .navbar .nav-link.active::after { transform: scaleX(1); }
+}
+.navbar .form-control { font-size: .85rem; border-radius: 0; }
+.navbar .form-control:focus { border-color: var(--rosa-medio); box-shadow: none; }
+
+/* ---------- 3. Botões ---------- */
+.btn {
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-size: .75rem;
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-padding-y: .75rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  transition: background-color .25s, color .25s, border-color .25s, transform .15s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-sm { --bs-btn-padding-x: 1rem; --bs-btn-padding-y: .45rem; --bs-btn-font-size: .68rem; }
+.btn-lg { --bs-btn-padding-x: 2.2rem; --bs-btn-padding-y: .95rem; --bs-btn-font-size: .8rem; }
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--rosa-escuro);
+  --bs-btn-border-color: var(--rosa-escuro);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--preto);
+  --bs-btn-hover-border-color: var(--preto);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--preto);
+  --bs-btn-active-border-color: var(--preto);
+  --bs-btn-focus-shadow-rgb: 190, 24, 93;
+}
+/* No fundo preto (navbar), o hover do botão rosa vira rosa médio */
+.navbar .btn-primary {
+  --bs-btn-hover-color: var(--preto);
+  --bs-btn-hover-bg: var(--rosa-medio);
+  --bs-btn-hover-border-color: var(--rosa-medio);
+  --bs-btn-active-color: var(--preto);
+  --bs-btn-active-bg: var(--rosa-medio);
+  --bs-btn-active-border-color: var(--rosa-medio);
+}
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--texto-suave);
+  --bs-btn-border-color: var(--texto-suave);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--rosa-escuro);
+  --bs-btn-hover-border-color: var(--rosa-escuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--rosa-escuro);
+  --bs-btn-active-border-color: var(--rosa-escuro);
+}
+.btn-dark {
+  --bs-btn-bg: var(--preto);
+  --bs-btn-border-color: var(--preto);
+  --bs-btn-hover-bg: var(--rosa-escuro);
+  --bs-btn-hover-border-color: var(--rosa-escuro);
+  --bs-btn-active-bg: var(--rosa-escuro);
+  --bs-btn-active-border-color: var(--rosa-escuro);
+}
+.btn-light {
+  --bs-btn-color: var(--preto);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--preto);
+  --bs-btn-hover-border-color: var(--preto);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--preto);
+  --bs-btn-active-border-color: var(--preto);
+}
+.btn-outline-dark {
+  --bs-btn-color: var(--preto);
+  --bs-btn-border-color: var(--preto);
+  --bs-btn-hover-bg: var(--preto);
+  --bs-btn-hover-border-color: var(--preto);
+  --bs-btn-active-bg: var(--preto);
+  --bs-btn-active-border-color: var(--preto);
+}
+.btn-outline-light {
+  --bs-btn-hover-color: var(--preto);
+  --bs-btn-active-color: var(--preto);
+}
+.btn-outline-secondary {
+  --bs-btn-color: var(--preto);
+  --bs-btn-border-color: #cdb7c4;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--rosa-escuro);
+  --bs-btn-hover-border-color: var(--rosa-escuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--rosa-escuro);
+  --bs-btn-active-border-color: var(--rosa-escuro);
+}
+
+
+/* ---------- 4. Carrossel com imagens ---------- */
+
+.carousel-item {
+  height: 32rem;
+}
+
+.hero-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Camada escura para melhorar a leitura dos textos */
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.hero-slide > .container {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide .carousel-caption {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.hero-slide h1 {
+  font-size: clamp(2.2rem, 6vw, 4.25rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+/* Imagens dos slides: troque os links no HTML */
+.hero-preto {
+  background-color: var(--preto);
+  color: #fff;
+}
+
+.hero-preto h1 {
+  color: var(--rosa-claro);
+}
+
+.hero-medio {
+  background-color: var(--rosa-medio);
+  color: var(--preto);
+}
+
+.hero-medio .carousel-caption {
+  color: #fff;
+}
+
+.hero-escuro {
+  background-color: var(--rosa-escuro);
+  color: #fff;
+}
+
+/* Moldura decorativa */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-medio::before {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Indicadores e controles */
+.carousel-indicators [data-bs-target] {
+  width: 2rem;
+  height: 3px;
+  border: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  transition: opacity 0.25s;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 26rem;
+  }
+
+  .hero-slide h1 {
+    font-size: 2rem;
+  }
+
+  .hero-slide::before {
+    inset: 0.75rem;
+  }
+}
+
+/* ---------- 5. Espaços de imagem ---------- */
+/* Troque por <img src="..." alt="..." class="..."> quando tiver as fotos */
+.media-slot {
+  position: relative; width: 100%;
+  aspect-ratio: 4 / 5;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  overflow: hidden;
+}
+.media-slot::after {
+  content: ""; position: absolute; inset: .85rem;
+  border: 1px solid currentColor; opacity: .35; pointer-events: none;
+}
+.media-slot::before {
+  content: attr(data-label);
+  font-size: .7rem; letter-spacing: .24em; text-transform: uppercase;
+}
+.media-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.media-slot.tone-mid { background: var(--rosa-medio); color: var(--preto); }
+.media-slot.tone-dark { background: var(--preto); color: var(--rosa-medio); }
+
+/* Imagem redonda (classe rounded-circle do Bootstrap) */
+.media-slot.rounded-circle { aspect-ratio: 1 / 1; max-width: 22rem; }
+.media-slot.rounded-circle::after { border-radius: 50%; inset: .6rem; }
+.media-slot.rounded-circle.is-small { width: 140px; margin: 0 auto 1.5rem; }
+.media-slot.rounded-circle.is-small::after { inset: .4rem; }
+
+/* Miniatura dos cards (card-img-top) */
+.card > .media-slot { aspect-ratio: 16 / 10; }
+
+/* ---------- 6. Seções ---------- */
+.eyebrow {
+  display: block; margin-bottom: 1rem;
+  font-size: .72rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--rosa-escuro); font-weight: 600;
+}
+.featurette-heading { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.02em; margin-bottom: 1.25rem; }
+.featurette-image { transition: transform .6s ease; }
+.featurette:hover .featurette-image { transform: scale(1.03); }
+
+/* Três colunas (contato) */
+.marketing .col-lg-4 { margin-bottom: 1.5rem; text-align: center; }
+.marketing .col-lg-4 p { margin-left: .75rem; margin-right: .75rem; color: var(--texto-suave); }
+.marketing .col-lg-4 .media-slot { transition: transform .35s ease; }
+.marketing .col-lg-4:hover .media-slot { transform: translateY(-4px); }
+
+/* Banner de página interna */
+.page-banner {
+  min-height: 20rem; display: flex; align-items: center; text-align: center;
+  position: relative;
+}
+.page-banner::before {
+  content: ""; position: absolute; inset: 1.25rem;
+  border: 1px solid rgba(252, 231, 243, .28); pointer-events: none;
+}
+.page-banner h1 { font-size: clamp(2.2rem, 6vw, 4rem); color: var(--rosa-claro); }
+.page-banner .lead { color: var(--rosa-claro); opacity: .9; }
+
+/* Jumbotron rosa claro (sobre) */
+.jumbotron-rosa { background: var(--rosa-claro); }
+.jumbotron-rosa p { color: var(--texto-suave); }
+.text-bg-dark p { color: #E9DDE4; }
+.text-bg-dark h2 { color: var(--rosa-claro); }
+
+/* ---------- 7. Catálogo (exemplo "album") ---------- */
+.product-card { transition: transform .3s ease, box-shadow .3s ease; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.5rem rgba(23, 18, 23, .12) !important; }
+.product-card .card-text { color: var(--texto-suave); }
+
+/* ---------- 8. Rodapé (exemplo "footers") ---------- */
+.site-footer { background: var(--preto); color: var(--rosa-claro); margin-top: 0 !important; }
+.footer-brand {
+  font-family: var(--fonte-titulo); font-size: 1.5rem;
+  letter-spacing: .32em; text-transform: uppercase;
+  color: #fff; text-decoration: none; transition: color .25s;
+}
+.footer-brand:hover { color: var(--rosa-medio); }
+.footer-copy, .footer-tagline { font-size: .85rem; color: #D8C5D0; }
+.site-footer .nav-link { color: var(--rosa-claro); font-size: .85rem; transition: color .25s; }
+.site-footer .nav-link:hover { color: var(--rosa-medio); }
+
+/* ---------- 9. Animações discretas ---------- */
+@keyframes subir {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.carousel-item.active .carousel-caption > * { animation: subir .7s ease both; }
+.carousel-item.active .carousel-caption > *:nth-child(2) { animation-delay: .12s; }
+.carousel-item.active .carousel-caption > *:nth-child(3) { animation-delay: .24s; }
+.page-banner .container > * { animation: subir .7s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- 10. Responsividade ---------- */
+@media (max-width: 575.98px) {
+  .carousel-item { height: 30rem; }
+  .carousel-control-prev, .carousel-control-next { display: none; }
+  .hero-slide::before, .page-banner::before { inset: .6rem; }
+  .navbar-brand { font-size: 1.2rem; letter-spacing: .24em; }
+  .footer-brand { font-size: 1.25rem; }
+  .promo-bar { letter-spacing: .14em; font-size: .66rem; }
+  .hero-slide .carousel-caption { left: 1.75rem; right: 1.75rem; }
+}

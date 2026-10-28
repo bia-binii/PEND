@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre | Atividade Catálogo - Bootstrap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Faixa promocional -->
+  <div class="promo-bar">
+    <a href="produtos.html">Conheça nossos produtos &rarr;</a>
+  </div>
+
+  <!-- Cabeçalho (navbar padrão do Bootstrap, tema escuro) -->
+  <header class="sticky-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">LURA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <label for="busca" class="visually-hidden">Buscar</label>
+            <input id="busca" type="search" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+          </form>
+          <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-2">
+            <button type="button" class="btn btn-sm btn-outline-light">Login</button>
+            <button type="button" class="btn btn-sm btn-primary">CADASTRAR</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+  <!-- Carrossel principal (para usar foto: style="background-image:url('arquivo.jpg')" no .carousel-item) -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Destaques">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item hero-slide hero-preto active">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Nossa história.</h1>
+            <p class="opacity-75">Nascida para criar peças com caimento impecável, elegância e personalidade única.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hero-slide hero-medio">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1>Design & Exclusividade.</h1>
+            <p>Cada detalhe é desenhado com tecidos selecionados para valorizar a sua essência.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hero-slide hero-escuro">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Compromisso LURA.</h1>
+            <p>Alta qualidade, produção responsável e elegância pensada para durar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+  <!-- Quem somos (featurette) -->
+  <div class="container marketing py-5">
+    <div class="row featurette align-items-center gy-4 gx-md-5">
+      <div class="col-md-5">
+        <div class="media-slot rounded-circle featurette-image img-fluid mx-auto" role="img" aria-label="Espaço reservado para imagem da empresa"></div>
+      </div>
+      <div class="col-md-7">
+        <span class="eyebrow">Sobre</span>
+        <h2 class="featurette-heading fw-normal lh-1">Quem somos</h2>
+        <p class="lead">A LURA nasceu do desejo de unir sofisticação, conforto e atemporalidade em cada peça. Criada por mentes apaixonadas pela moda autêntica, a nossa marca desenvolve coleções pensadas para valorizar a presença da mulher moderna em todos os momentos. Unimos tecidos nobres, corte preciso e acabamento impecável para entregar mais do que roupas: entregamos autoconfiança, elegância e estilo com propósito.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jumbotrons (exemplo "jumbotrons" do Bootstrap) -->
+  <div class="bg-body-tertiary py-5">
+    <div class="container">
+      <div class="p-5 mb-4 jumbotron-rosa">
+        <div class="container-fluid py-4">
+          <h2 class="display-5 fw-normal">Autoconfiança em Cada Detalhe</h2>
+          <p class="col-md-8 fs-5">
+            Acreditamos que vestir-se bem é uma forma de expressão e poder. Criamos roupas que acompanham o ritmo da mulher contemporânea sem abrir mão da sofisticação.</p>
+          <button class="btn btn-primary btn-lg" type="button">SAIBA MAIS</button>
+        </div>
+      </div>
+      <div class="row align-items-md-stretch g-4">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark">
+            <h2 class="fw-normal">Modelagem & Matéria-Prima</h2>
+            <p>Das peças de alfaiataria aos cortes fluidos, selecionamos tecidos de alta durabilidade e acabamentos impecáveis para garantir conforto e ajuste perfeito.</p>
+            <button class="btn btn-outline-light" type="button">VER DETALHES</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-body border">
+            <h2 class="fw-normal">Do Ateliê para Você</h2>
+            <p>Cuidamos de cada etapa da sua jornada, desde a escolha do look até a entrega em sua casa, oferecendo um atendimento próximo e especial.</p>
+            <br>
+            <button class="btn btn-outline-dark" type="button">FALE CONOSCO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <!-- Rodapé (estrutura do exemplo "footers" do Bootstrap) -->
+  <footer class="site-footer mt-5" data-bs-theme="dark">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+        <p class="col-md-4 mb-3 mb-md-0 text-center text-md-start footer-copy">&copy; 2025 Company, Inc</p>
+        <div class="col-md-4 mb-3 mb-md-0 text-center">
+          <a class="footer-brand" href="index.html">LURA</a>
+          <p class="footer-tagline mb-0 mt-2">Elegância e sofisticação em cada detalhe da sua coleção.</p>
+        </div>
+        <ul class="nav col-md-4 justify-content-center justify-content-md-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Início</a></li>
+          <li class="nav-item"><a href="produtos.html" class="nav-link px-2">Produtos</a></li>
+          <li class="nav-item"><a href="sobre.html" class="nav-link px-2">Sobre</a></li>
+          <li class="nav-item"><a href="contato.html" class="nav-link px-2">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

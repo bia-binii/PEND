@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Atividade Catálogo - Bootstrap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Faixa promocional -->
+  <div class="promo-bar">
+    <a href="produtos.html">Conheça nossos produtos &rarr;</a>
+  </div>
+
+  <!-- Cabeçalho (navbar padrão do Bootstrap, tema escuro) -->
+  <header class="sticky-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">LURA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contato.html">Contato</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <label for="busca" class="visually-hidden">Buscar</label>
+            <input id="busca" type="search" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+          </form>
+          <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-2">
+            <button type="button" class="btn btn-sm btn-outline-light">Login</button>
+            <button type="button" class="btn btn-sm btn-primary">CADASTRAR</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+  <!-- Banner -->
+  <section class="page-banner text-bg-dark">
+    <div class="container">
+      <h1>Fale Conosco</h1>
+      <p class="lead mb-0">Estamos aqui para ajudar você a encontrar o look perfeito e tirar todas as suas dúvidas.</p>
+    </div>
+  </section>
+
+  <!-- Três colunas (exemplo "carousel" do Bootstrap) -->
+  <div class="container marketing py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="media-slot rounded-circle is-small" role="img" aria-label="Espaço reservado para imagem"></div>
+        <h2 class="fw-normal">E-mail & Suporte</h2>
+        <p>Tem dúvidas sobre o seu pedido, entregas ou trocas? Escreva para nós e responderemos em até 24 horas úteis.</p>
+        <p><a class="btn btn-secondary" href="#conteudo">ENVIAR E-MAIL</a></p>
+      </div>
+      <div class="col-lg-4">
+        <div class="media-slot rounded-circle is-small tone-mid" role="img" aria-label="Espaço reservado para imagem"></div>
+        <h2 class="fw-normal">WhatsApp LURA</h2>
+        <p>Precisa de uma resposta rápida ou de ajuda personalizada para escolher o seu tamanho? Fale diretamente com as nossas consultoras..</p>
+        <p><a class="btn btn-secondary" href="#conteudo">INICIAR CONVERSA</a></p>
+      </div>
+      <div class="col-lg-4">
+        <div class="media-slot rounded-circle is-small tone-dark" role="img" aria-label="Espaço reservado para imagem"></div>
+        <h2 class="fw-normal">Redes Sociais</h2>
+        <p>Siga o nosso perfil para inspirações de looks diários, lançamentos exclusivos e novidades em primeira mão.</p>
+        <br>
+        <p><a class="btn btn-secondary" href="#conteudo">SEGUIR NO INSTAGRAM</a></p>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <!-- Rodapé (estrutura do exemplo "footers" do Bootstrap) -->
+  <footer class="site-footer mt-5" data-bs-theme="dark">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+        <p class="col-md-4 mb-3 mb-md-0 text-center text-md-start footer-copy">&copy; 2025 Company, Inc</p>
+        <div class="col-md-4 mb-3 mb-md-0 text-center">
+          <a class="footer-brand" href="index.html">LURA</a>
+          <p class="footer-tagline mb-0 mt-2">Elegância e sofisticação em cada detalhe da sua coleção.</p>
+        </div>
+        <ul class="nav col-md-4 justify-content-center justify-content-md-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Início</a></li>
+          <li class="nav-item"><a href="produtos.html" class="nav-link px-2">Produtos</a></li>
+          <li class="nav-item"><a href="sobre.html" class="nav-link px-2">Sobre</a></li>
+          <li class="nav-item"><a href="contato.html" class="nav-link px-2">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
